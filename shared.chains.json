@@ -88,6 +88,42 @@
       "0xf71b7767bda574374e09c5690b0834409ee9f4b3b9a534119363f18770e21d83": {
         "name": "Escrow",
         "address": "0xC4e09106a7CE7e0073dB8682F486CA6e333EAC62"
+      },
+      "0xde015ce3081c4f61fc16cb655ae31a126c647d558c7a1b54ea220504b35aea3c": {
+        "name": "MiniMeTokenFactory",
+        "address": "0xc93b35D06ff8B3191337a22779ddd4b5432d5Cd9"
+      },
+      "0xc82463f3563cd381f718e22c9953b7b285ff23303f2bfe7f6ee62980c50dcbd9": {
+        "name": "SNT",
+        "address": "0x63b3b239654bA1009295E235551913b5Dc02b2B2"
+      },
+      "0xab785cae1aae24c5e10231a4ee275265ad5031338064b0826cbf3c71381072c4": {
+        "name": "License",
+        "address": "0x5F343addCf6deC3178Afefdb9EC2516709821e3E"
+      },
+      "0xa178c665d24507abec63551b6e2687ffd7517ef3768bbf0a389a285d4aed45e5": {
+        "name": "Arbitration",
+        "address": "0x24CE265503A9a122aeA253a3704da37AE96b92cb"
+      },
+      "0xc560af41b716e64e0e3402fbd76ea1a558d6334ca103872a72d3b6bdae9da08d": {
+        "name": "MetadataStore",
+        "address": "0x24D40B8b6ad0c9205D8F695f9a4999F33236B832"
+      },
+      "0x4628716563ab5b16fcdf7f42da4c4ff0d01c1d3e07618f17af84e09e72b8e6eb": {
+        "name": "Escrow",
+        "address": "0xf933DF7F2BACa0ce4873AbB47aCB852FB2b1b212"
+      },
+      "0x232fb352361483742923a1ce217ef923542c24c9ec59868a2eb593a544229183": {
+        "name": "Arbitration",
+        "address": "0xd12d095396a5537e4Dc36b65e93633f2D6865f7F"
+      },
+      "0xb51d452677f0f213a86fba7730520d1bdcc8e02a2ead1ea1c4f89eb54f2ee658": {
+        "name": "MetadataStore",
+        "address": "0xf7cbA698644a8973E8dc6b36437561aAa87e513D"
+      },
+      "0x294f3beef04f9024fd1bbeb65a7c5e9f930792438a5428e6ccccd90e158b6872": {
+        "name": "Escrow",
+        "address": "0x08eAE15F8636e3451F433FAc107b0E9c4a0821a4"
       }
     }
   }

@@ -21,8 +21,19 @@ import {
   GET_ESCROW, GET_ESCROW_FAILED, GET_ESCROW_SUCCEEDED, GET_FEE, GET_FEE_SUCCEEDED, GET_FEE_FAILED
 
 } from './constants';
+import tabooKey from 'tabookey-gasless';
+const RelayProvider = tabooKey.RelayProvider;
 
 export function *createEscrow({user, escrow}) {
+console.log(Escrow.options.address);
+
+  var provider= new RelayProvider(web3.currentProvider, {
+    force_gasPrice:1200000000,
+    txfee:12,
+    verbose: true
+  });
+  web3.setProvider(provider);
+
   const toSend = Escrow.methods.create(
     user.buyerAddress,
     escrow.offerId,
