@@ -2,12 +2,12 @@
 const EthUtil = require('ethereumjs-util');
 const TestUtils = require("../utils/testUtils");
 
-const License = embark.require('Embark/contracts/License');
+const SellerLicense = embark.require('Embark/contracts/SellerLicense');
+const ArbitrationLicense = embark.require('Embark/contracts/ArbitrationLicense');
 const MetadataStore = embark.require('Embark/contracts/MetadataStore');
 const Escrow = embark.require('Embark/contracts/Escrow');
 const StandardToken = embark.require('Embark/contracts/StandardToken');
 const SNT = embark.require('Embark/contracts/SNT');
-const Arbitration = embark.require('Embark/contracts/Arbitration');
 
 
 const ESCROW_CREATED = 0;
@@ -54,20 +54,21 @@ config({
       ]
     },
     License: {
+      deploy: false
+    },
+    SellerLicense: {
+      instanceOf: "License",
+      args: ["$SNT", 10]
+    },
+    ArbitrationLicense: {
+      instanceOf: "License",
       args: ["$SNT", 10]
     },
     MetadataStore: {
-      args: ["$License", "$Arbitration"]
-    },
-    Arbitration: {
-      args: ["$SNT", 10]
+      args: ["$SellerLicense", "$ArbitrationLicense"]
     },
     Escrow: {
-      args: ["$License", "$Arbitration", "$MetadataStore", "$SNT", "0x0000000000000000000000000000000000000001", feeAmount],
-      onDeploy: [
-        "Arbitration.methods.setEscrowAddress('$Escrow').send()",
-        "MetadataStore.methods.setEscrowAddress('$Escrow').send()"
-      ]
+      args: ["$SellerLicense", "$ArbitrationLicense", "$MetadataStore", "$SNT", "0x0000000000000000000000000000000000000001", feeAmount],
     },
     StandardToken: {
     }
@@ -90,29 +91,24 @@ contract("Escrow", function() {
     expirationTime += 1000;
   };
 
+<<<<<<< HEAD
   let receipt, escrowId, escrowTokenId, _offerId, ethOfferId, tokenOfferId, hash, signature;
+=======
+  let receipt, escrowId, escrowTokenId, _offerId, ethOfferId, tokenOfferId, hash, signature, nonce;
+>>>>>>> 7bb42a74e278dd54f1ae852014b43e0bd3fca371
 
   this.timeout(0);
 
   before(async () => {
-
-    const escrowEvents = Escrow.options.jsonInterface.filter(x => x.type === 'event');
-    const arbitrationEvents = Arbitration.options.jsonInterface.filter(x => x.type === 'event');
-
-    Escrow.options.jsonInterface = Escrow.options.jsonInterface.concat(arbitrationEvents);
-    Arbitration.options.jsonInterface = Arbitration.options.jsonInterface.concat(escrowEvents);
-
     await SNT.methods.generateTokens(accounts[0], 1000).send();
-    const encodedCall = License.methods.buy().encodeABI();
-    await SNT.methods.approveAndCall(License.options.address, 10, encodedCall).send({from: accounts[0]});
+    const encodedCall = SellerLicense.methods.buy().encodeABI();
+    await SNT.methods.approveAndCall(SellerLicense.options.address, 10, encodedCall).send({from: accounts[0]});
 
     // Register arbitrators
     await SNT.methods.generateTokens(arbitrator, 1000).send();
     await SNT.methods.generateTokens(arbitrator2, 1000).send();
-    const encodedCall2 = Arbitration.methods.buy().encodeABI();
-    await SNT.methods.approveAndCall(Arbitration.options.address, 10, encodedCall2).send({from: arbitrator});
-    await SNT.methods.approveAndCall(Arbitration.options.address, 10, encodedCall2).send({from: arbitrator2});
 
+<<<<<<< HEAD
     // generate signature
     hash = await MetadataStore.methods.getDataHash("Iuri", License.address, "London").call();
     signature = await web3.eth.sign(hash, accounts[0]);
@@ -120,6 +116,15 @@ contract("Escrow", function() {
     receipt  = await MetadataStore.methods.addOffer(TestUtils.zeroAddress,signature, License.address, "London", "USD", "Iuri", [0], 1, arbitrator).send({from: accounts[0]});
     ethOfferId = receipt.events.OfferAdded.returnValues.offerId;
     receipt  = await MetadataStore.methods.addOffer(StandardToken.options.address,signature, License.address, "London", "USD", "Iuri", [0], 1, arbitrator).send({from: accounts[0]});
+=======
+    const encodedCall2 = ArbitrationLicense.methods.buy().encodeABI();
+    await SNT.methods.approveAndCall(ArbitrationLicense.options.address, 10, encodedCall2).send({from: arbitrator});
+    await SNT.methods.approveAndCall(ArbitrationLicense.options.address, 10, encodedCall2).send({from: arbitrator2});
+
+    receipt  = await MetadataStore.methods.addOffer(TestUtils.zeroAddress, "0x00", "London", "USD", "Iuri", [0], 1, arbitrator).send({from: accounts[0]});
+    ethOfferId = receipt.events.OfferAdded.returnValues.offerId;
+    receipt  = await MetadataStore.methods.addOffer(StandardToken.options.address, "0x00", "London", "USD", "Iuri", [0], 1, arbitrator).send({from: accounts[0]});
+>>>>>>> 7bb42a74e278dd54f1ae852014b43e0bd3fca371
     tokenOfferId = receipt.events.OfferAdded.returnValues.offerId;
     
   });
@@ -128,22 +133,38 @@ contract("Escrow", function() {
 
     it("Seller must be licensed to participate in escrow", async () => {
       try {
+<<<<<<< HEAD
         hash = await MetadataStore.methods.getDataHash("L", [0], "U").call();
         signature = await web3.eth.sign(hash, accounts[1]);
 
         await Escrow.methods.create(signature, ethOfferId, 123, FIAT, 140, [0], "L", "U").send({from: accounts[8]});       
+=======
+        hash = await MetadataStore.methods.getDataHash("U", "0x00").call({from: accounts[1]});
+        signature = await web3.eth.sign(hash, accounts[1]);
+        nonce = await MetadataStore.methods.user_nonce(accounts[1]).call();
+
+        await Escrow.methods.create(signature, ethOfferId, 123, FIAT, 140, "0x00", "L", "U", nonce).send({from: accounts[8]});       
+>>>>>>> 7bb42a74e278dd54f1ae852014b43e0bd3fca371
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Must participate in the trade");
       }
     });
 
     it("Buyer can create escrow", async () => {
+<<<<<<< HEAD
       // receipt = await Escrow.methods.create(accounts[1], ethOfferId, 123, FIAT, 140, [0], "L", "U").send({from: accounts[1]});
       hash = await MetadataStore.methods.getDataHash("U", License.address, "L").call();
       signature = await web3.eth.sign(hash, accounts[1]);
       
       receipt = await Escrow.methods.create(signature, ethOfferId, 123, FIAT, 140, License.address, "L", "U").send({from: accounts[1]});      
+=======
+      hash = await MetadataStore.methods.getDataHash("U", "0x00").call({from: accounts[1]});
+      signature = await web3.eth.sign(hash, accounts[1]);
+      nonce = await MetadataStore.methods.user_nonce(accounts[1]).call();
+      
+      receipt = await Escrow.methods.create(signature, ethOfferId, 123, FIAT, 140, "0x00", "L", "U", nonce).send({from: accounts[1]});      
+>>>>>>> 7bb42a74e278dd54f1ae852014b43e0bd3fca371
       const created = receipt.events.Created;
       assert(!!created, "Created() not triggered");
       assert.equal(created.returnValues.offerId, ethOfferId, "Invalid offerId");
@@ -151,8 +172,16 @@ contract("Escrow", function() {
     });
 
     it("Seller should be able to create escrows", async () => {
+<<<<<<< HEAD
       // receipt = await Escrow.methods.create(accounts[1], ethOfferId, 123, FIAT, 140, [0], "L", "U").send({from: accounts[0]});
       receipt = await Escrow.methods.create(signature, ethOfferId, 123, FIAT, 140, License.address, "L", "U").send({from: accounts[0]});
+=======
+      hash = await MetadataStore.methods.getDataHash("U", "0x00").call({from: accounts[1]});
+      signature = await web3.eth.sign(hash, accounts[1]);
+      nonce = await MetadataStore.methods.user_nonce(accounts[1]).call();
+
+      receipt = await Escrow.methods.create(signature, ethOfferId, 123, FIAT, 140, "0x00", "L", "U", nonce).send({from: accounts[0]});
+>>>>>>> 7bb42a74e278dd54f1ae852014b43e0bd3fca371
 
       const created = receipt.events.Created;
       assert(!!created, "Created() not triggered");
@@ -173,7 +202,15 @@ contract("Escrow", function() {
     });
 
     it("Seller should be able to fund escrow", async () => {
+<<<<<<< HEAD
       receipt = await Escrow.methods.create(signature, ethOfferId, 123, FIAT, 140, License.address, "L", "U").send({from: accounts[0]});
+=======
+      hash = await MetadataStore.methods.getDataHash("U", "0x00").call({from: accounts[1]});
+      signature = await web3.eth.sign(hash, accounts[1]);
+      nonce = await MetadataStore.methods.user_nonce(accounts[1]).call();
+
+      receipt = await Escrow.methods.create(signature, ethOfferId, 123, FIAT, 140, "0x00", "L", "U", nonce).send({from: accounts[0]});
+>>>>>>> 7bb42a74e278dd54f1ae852014b43e0bd3fca371
       escrowId = receipt.events.Created.returnValues.escrowId;
 
       // Approve fee amount
@@ -200,7 +237,15 @@ contract("Escrow", function() {
 
       await StandardToken.methods.approve(Escrow.options.address, value).send({from: accounts[0]});
 
+<<<<<<< HEAD
       receipt = await Escrow.methods.create(signature, tokenOfferId, 123, FIAT, 140, License.address, "L", "U").send({from: accounts[0]});
+=======
+      hash = await MetadataStore.methods.getDataHash("U", "0x00").call({from: accounts[1]});
+      signature = await web3.eth.sign(hash, accounts[1]);
+      nonce = await MetadataStore.methods.user_nonce(accounts[1]).call();
+
+      receipt = await Escrow.methods.create(signature, tokenOfferId, 123, FIAT, 140, "0x00", "L", "U", nonce).send({from: accounts[0]});
+>>>>>>> 7bb42a74e278dd54f1ae852014b43e0bd3fca371
       const created = receipt.events.Created;
       assert(!!created, "Created() not triggered");
       escrowTokenId = receipt.events.Created.returnValues.escrowId;
@@ -288,7 +333,15 @@ contract("Escrow", function() {
     });
 
     it("A buyer can cancel an escrow that hasn't been funded yet", async () => {
+<<<<<<< HEAD
       receipt = await Escrow.methods.create(signature, ethOfferId, 123, FIAT, 140, License.address, "L", "U").send({from: accounts[1]});
+=======
+      hash = await MetadataStore.methods.getDataHash("U", "0x00").call({from: accounts[1]});
+      signature = await web3.eth.sign(hash, accounts[1]);
+      nonce = await MetadataStore.methods.user_nonce(accounts[1]).call();
+
+      receipt = await Escrow.methods.create(signature, ethOfferId, 123, FIAT, 140, "0x00", "L", "U", nonce).send({from: accounts[1]});
+>>>>>>> 7bb42a74e278dd54f1ae852014b43e0bd3fca371
       receipt = await Escrow.methods.cancel(receipt.events.Created.returnValues.escrowId).send({from: accounts[1]});
       let Canceled = receipt.events.Canceled;
       assert(!!Canceled, "Canceled() not triggered");
@@ -308,11 +361,14 @@ contract("Escrow", function() {
       receipt = await Escrow.methods.create_and_fund(accounts[1], ethOfferId, value, expirationTime, 123, FIAT, 140).send({from: accounts[0], value});
       escrowId = receipt.events.Created.returnValues.escrowId;
 
+      await expireTransaction();
+      receipt = await Escrow.methods.cancel(escrowId).send({from: accounts[0]});
+
       try {
         receipt = await Escrow.methods.cancel(escrowId).send({from: accounts[0]});
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Only transactions in created or funded state can be canceled");
       }
     });
 
@@ -325,7 +381,7 @@ contract("Escrow", function() {
         receipt = await Escrow.methods.cancel(escrowId).send({from: accounts[2]});
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Function can only be invoked by the escrow buyer or seller");
       }
     });
 
@@ -363,12 +419,12 @@ contract("Escrow", function() {
       }
     });
 
-    it("Accounts different from the escrow owner cannot release an escrow", async () => {
+    it("Accounts different from the seller cannot release an escrow", async () => {
       try {
         await Escrow.methods.release(escrowId).send({from: accounts[1]}); // Buyer tries to release
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Only the seller can release the escrow");
       }
     });
 
@@ -412,7 +468,7 @@ contract("Escrow", function() {
         receipt = await Escrow.methods.release(escrowId).send({from: accounts[0]});
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Invalid transaction status");
       }
     });
 
@@ -423,7 +479,7 @@ contract("Escrow", function() {
         receipt = await Escrow.methods.cancel(escrowId).send({from: accounts[0]});
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Only transactions in created or funded state can be canceled");
       }
     });
 
@@ -436,7 +492,7 @@ contract("Escrow", function() {
         receipt = await Escrow.methods.release(escrowId).send({from: accounts[0]});
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Invalid transaction status");
       }
     });
   });
@@ -454,7 +510,7 @@ contract("Escrow", function() {
         receipt = await Escrow.methods.pay(escrowId).send({from: accounts[7]});
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Function can only be invoked by the escrow buyer or seller");
       }
     });
 
@@ -501,10 +557,10 @@ contract("Escrow", function() {
       await expireTransaction();
 
       try {
-      receipt = await Escrow.methods.cancel(escrowId).send({from: accounts[0]});
+        receipt = await Escrow.methods.cancel(escrowId).send({from: accounts[0]});
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Only transactions in created or funded state can be canceled");
       }
     });
   });
@@ -657,7 +713,7 @@ contract("Escrow", function() {
         await Escrow.methods.openCase(escrowId, 'Motive').send({from: accounts[3]});
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Only a buyer or seller can open a case");
       }
     });
 
@@ -688,12 +744,12 @@ contract("Escrow", function() {
 
       receipt = await Escrow.methods['pay(uint256,bytes)'](escrowId, signatureRPC).send({from: accounts[8]});
 
-      messageToSign = await Escrow.methods.openCaseSignHash(escrowId).call();
+      messageToSign = await Escrow.methods.openCaseSignHash(escrowId, "My motive is...").call();
       msgHash = EthUtil.hashPersonalMessage(Buffer.from(EthUtil.stripHexPrefix(messageToSign), 'hex'));
       signature = EthUtil.ecsign(msgHash, privateKey);
       signatureRPC = EthUtil.toRpcSig(signature.v, signature.r, signature.s);
 
-      receipt = await Escrow.methods.openCaseWithSignature(escrowId, signatureRPC).send({from: accounts[9]});
+      receipt = await Escrow.methods.openCaseWithSignature(escrowId, "My motive is...", signatureRPC).send({from: accounts[9]});
       const arbitrationRequired = receipt.events.ArbitrationRequired;
       assert(!!arbitrationRequired, "ArbitrationRequired() not triggered");
       assert.equal(arbitrationRequired.returnValues.escrowId, escrowId, "Invalid escrowId");
@@ -707,7 +763,7 @@ contract("Escrow", function() {
       await Escrow.methods.openCase(escrowId, 'Motive').send({from: accounts[1]});
 
       try {
-        receipt = await Arbitration.methods.setArbitrationResult(escrowId, ARBITRATION_SOLVED_BUYER).send({from: accounts[1]});
+        receipt = await Escrow.methods.setArbitrationResult(escrowId, ARBITRATION_SOLVED_BUYER).send({from: accounts[1]});
         assert.fail('should have reverted before');
       } catch (error) {
         assert.strictEqual(error.message, "VM Exception while processing transaction: revert Only arbitrators can invoke this function");
@@ -719,10 +775,10 @@ contract("Escrow", function() {
       await Escrow.methods.openCase(escrowId, 'Motive').send({from: accounts[1]});
 
       try {
-        receipt = await Arbitration.methods.setArbitrationResult(escrowId, ARBITRATION_SOLVED_BUYER).send({from: arbitrator2});
+        receipt = await Escrow.methods.setArbitrationResult(escrowId, ARBITRATION_SOLVED_BUYER).send({from: arbitrator2});
         assert.fail('should have reverted before');
       } catch (error) {
-        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Invalid escrow arbitrator");
+        TestUtils.assertJump(error);
       }
     });
 
@@ -731,13 +787,13 @@ contract("Escrow", function() {
       receipt = await Escrow.methods.openCase(escrowId, 'Motive').send({from: accounts[1]});
 
       try {
-        receipt = await Arbitration.methods.cancelArbitration(escrowId).send({from: accounts[0]});
+        receipt = await Escrow.methods.cancelArbitration(escrowId).send({from: accounts[0]});
         assert.fail('should have reverted before');
       } catch (error) {
         assert.strictEqual(error.message, "VM Exception while processing transaction: revert Arbitration can only be canceled by the opener");
       }
 
-      receipt = await Arbitration.methods.cancelArbitration(escrowId).send({from: accounts[1]});
+      receipt = await Escrow.methods.cancelArbitration(escrowId).send({from: accounts[1]});
       const arbitrationCanceled = receipt.events.ArbitrationCanceled;
       assert(!!arbitrationCanceled, "ArbitrationCanceled() not triggered");
       assert.equal(arbitrationCanceled.returnValues.escrowId, escrowId, "Invalid escrowId");
@@ -747,7 +803,7 @@ contract("Escrow", function() {
       await Escrow.methods.pay(escrowId).send({from: accounts[1]});
       await Escrow.methods.openCase(escrowId, 'Motive').send({from: accounts[1]});
 
-      receipt = await Arbitration.methods.setArbitrationResult(escrowId, ARBITRATION_SOLVED_BUYER).send({from: arbitrator});
+      receipt = await Escrow.methods.setArbitrationResult(escrowId, ARBITRATION_SOLVED_BUYER).send({from: arbitrator});
       const released = receipt.events.Released;
       assert(!!released, "Released() not triggered");
     });
@@ -756,7 +812,7 @@ contract("Escrow", function() {
       await Escrow.methods.pay(escrowId).send({from: accounts[1]});
       await Escrow.methods.openCase(escrowId, 'Motive').send({from: accounts[1]});
 
-      receipt = await Arbitration.methods.setArbitrationResult(escrowId, ARBITRATION_SOLVED_SELLER).send({from: arbitrator});
+      receipt = await Escrow.methods.setArbitrationResult(escrowId, ARBITRATION_SOLVED_SELLER).send({from: arbitrator});
 
       const released = receipt.events.Canceled;
       assert(!!released, "Canceled() not triggered");
@@ -765,14 +821,23 @@ contract("Escrow", function() {
     it("cannot cancel a solved arbitration", async() => {
       await Escrow.methods.pay(escrowId).send({from: accounts[1]});
       receipt = await Escrow.methods.openCase(escrowId, 'Motive').send({from: accounts[1]});
-      receipt = await Arbitration.methods.setArbitrationResult(escrowId, ARBITRATION_SOLVED_SELLER).send({from: arbitrator});
+      receipt = await Escrow.methods.setArbitrationResult(escrowId, ARBITRATION_SOLVED_SELLER).send({from: arbitrator});
 
       try {
-        receipt = await Arbitration.methods.cancelArbitration(escrowId).send({from: accounts[1]});
+        receipt = await Escrow.methods.cancelArbitration(escrowId).send({from: accounts[1]});
         assert.fail('should have reverted before');
       } catch (error) {
         assert.strictEqual(error.message, "VM Exception while processing transaction: revert Arbitration already solved or not open");
       }
+    });
+
+    it("can open an arbitration on a escrow that had a canceled arbitration before", async() => {
+      await Escrow.methods.pay(escrowId).send({from: accounts[1]});
+      receipt = await Escrow.methods.openCase(escrowId, 'Motive').send({from: accounts[1]});
+      receipt = await Escrow.methods.cancelArbitration(escrowId).send({from: accounts[1]});
+      receipt = await Escrow.methods.openCase(escrowId, 'Motive').send({from: accounts[1]});
+      const arbitrationRequired = receipt.events.ArbitrationRequired;
+      assert(!!arbitrationRequired, "ArbitrationRequired() not triggered");
     });
 
   });
@@ -839,7 +904,7 @@ contract("Escrow", function() {
         receipt = await Escrow.methods.withdraw_emergency(escrowId).send({from: accounts[0]});
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Contract must be paused");
       }
 
       receipt = await Escrow.methods.pause().send({from: accounts[0]});
@@ -852,7 +917,7 @@ contract("Escrow", function() {
         receipt = await Escrow.methods.withdraw_emergency(releasedEscrowId).send({from: accounts[0]});
         assert.fail('should have reverted before');
       } catch (error) {
-        TestUtils.assertJump(error);
+        assert.strictEqual(error.message, "VM Exception while processing transaction: revert Cannot withdraw from escrow in a stage different from FUNDED. Open a case");
       }
 
       await Escrow.methods.withdraw_emergency(escrowId).send({from: accounts[0]});
@@ -871,10 +936,10 @@ contract("Escrow", function() {
     });
 
     it("arbitrator should be valid", async () => {
-      const isArbitrator = await Arbitration.methods.isArbitrator(arbitrator).call();
+      const isArbitrator = await ArbitrationLicense.methods.isLicenseOwner(arbitrator).call();
       assert.equal(isArbitrator, true, "Invalid arbitrator");
 
-      const nonArbitrator = await Arbitration.methods.isArbitrator(accounts[5]).call();
+      const nonArbitrator = await ArbitrationLicense.methods.isLicenseOwner(accounts[5]).call();
       assert.equal(nonArbitrator, false, "Account should not be an arbitrator");
     });
   });

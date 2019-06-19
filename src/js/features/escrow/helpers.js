@@ -48,3 +48,13 @@ export function getTradeStatus(trade) {
     default: return tradeStates.waiting;
   }
 }
+
+const RELAY_DELAY = (((15 * 60) + 20) * 1000); // Adding 20 seconds buffer since blocks are not mined exactly on this time
+
+export function canRelay(lastActivity) {
+  return (lastActivity + RELAY_DELAY) < Date.now();
+}
+
+export function nextRelayDate(lastActivity) {
+  return new Date(lastActivity + RELAY_DELAY);
+}

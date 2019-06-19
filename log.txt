@@ -1,0 +1,1002 @@
+
+[2019-06-07 12:31:12:526] [warning]:  embark-solium: Registering console commands with function syntax is deprecated and will likely be removed in future versions of Embark
+[2019-06-07 12:31:12:531] [info]:  embark-solium: You can find the new API documentation here: [4mhttps://embark.status.im/docs/plugin_reference.html#registerConsoleCommand-options[24m
+[2019-06-07 12:31:12:588] [info]:  pid 8569 listening on /tmp/embark-2da1dbbf/embark.ipc
+[2019-06-07 12:31:12:592] [info]:  [32m[1m========================[22m[39m
+[2019-06-07 12:31:12:592] [info]:  [1m[33mWelcome to Embark 4.0.2[39m[22m
+[2019-06-07 12:31:12:592] [info]:  [32m[1m========================[22m[39m
+[2019-06-07 12:31:12:593] [info]:  loaded plugins: embark-solium, embarkjs-connector-web3, @trailofbits/embark-contract-info, embark-solc
+[2019-06-07 12:31:12:597] [trace]:  add check: Embark
+[2019-06-07 12:31:12:598] [trace]:  startMonitor
+[2019-06-07 12:31:12:757] [trace]:  add check: Ethereum
+[2019-06-07 12:31:13:243] [trace]:  add check: IPFS
+[2019-06-07 12:31:13:878] [trace]:  watchFiles
+[2019-06-07 12:31:13:881] [trace]:  
+[2019-06-07 12:31:13:884] [trace]:  watchFiles
+[2019-06-07 12:31:13:887] [trace]:  contracts/**
+[2019-06-07 12:31:13:915] [trace]:  watchFiles
+[2019-06-07 12:31:13:916] [trace]:  embarkConfig/**/contracts.json,embarkConfig/**/contracts.js
+[2019-06-07 12:31:13:918] [trace]:  watchFiles
+[2019-06-07 12:31:13:919] [trace]:  /home/x332/Projects/Status/status-teller-network/webpack.config.js,/home/x332/Projects/Status/status-teller-network/babel-loader-overrides.js,/home/x332/Projects/Status/status-teller-network/embarkConfig/pipeline.js
+[2019-06-07 12:31:13:919] [trace]:  watchFiles
+[2019-06-07 12:31:13:919] [trace]:  embarkConfig/**/webserver.json,embarkConfig/**/webserver.js
+[2019-06-07 12:31:13:922] [info]:  ready to watch file changes
+[2019-06-07 12:31:13:967] [trace]:  ready to watch pipeline config changes
+[2019-06-07 12:31:13:968] [info]:  Cockpit UI available at http://localhost:55555
+[2019-06-07 12:31:13:968] [trace]:  add check: api
+[2019-06-07 12:31:13:975] [trace]:  IPFS unavailable
+[2019-06-07 12:31:13:975] [info]:  IPFS node not found, attempting to start own node
+[2019-06-07 12:31:13:976] [trace]:  Storage module: Launching ipfs process...
+[2019-06-07 12:31:13:978] [info]:  [36mStarting Blockchain node in another process[39m
+[2019-06-07 12:31:13:991] [info]:  [36mStarting ipfs process[39m
+[2019-06-07 12:31:14:049] [trace]:  ready to watch contract config changes
+[2019-06-07 12:31:14:049] [trace]:  ready to watch webserver config changes
+[2019-06-07 12:31:14:050] [trace]:  ready to watch contract changes
+[2019-06-07 12:31:14:560] [info]:  [35m===============================================================================[39m
+[2019-06-07 12:31:14:560] [info]:  [35m===============================================================================[39m
+[2019-06-07 12:31:14:560] [info]:  [35mEmbark Blockchain using [4mGo-Ethereum (https://github.com/ethereum/go-ethereum)[24m[39m
+[2019-06-07 12:31:14:560] [info]:  [35m===============================================================================[39m
+[2019-06-07 12:31:14:560] [info]:  [35m===============================================================================[39m
+[2019-06-07 12:31:14:561] [info]:  [32mrunning: [4mgeth version[24m[39m
+[2019-06-07 12:31:14:637] [info]:  [32mrunning: [4mgeth --networkid=1337 --datadir=.embark/development/datadir --password=/home/x332/Projects/Status/status-teller-network/embarkConfig/development/password --ipcpath=/tmp/embark-2da1dbbf/geth.ipc account list [24m[39m
+[2019-06-07 12:31:14:673] [info]:  [32mrunning: [4mgeth --networkid=1337 --datadir=.embark/development/datadir --password=/home/x332/Projects/Status/status-teller-network/embarkConfig/development/password --ipcpath=/tmp/embark-2da1dbbf/geth.ipc --port=30303 --rpc --rpcport=8555 --rpcaddr=localhost --rpccorsdomain=*,http://localhost:8000,http://localhost:8080,http://embark --ws --wsport=8556 --wsaddr=localhost --wsorigins=*,http://localhost:8000,http://localhost:8080,http://embark --nodiscover --maxpeers=0 --mine --shh --rpcapi=eth,web3,net,debug,personal,shh --wsapi=eth,web3,net,shh,debug,pubsub,personal --unlock=0x002bf1f1a26ef715d395adda31965942ff16deb2 --miner.gastarget=8000000 --dev[24m[39m
+[2019-06-07 12:31:14:709] [info]:  geth: INFO [06-07|12:31:14.708] Maximum peer count                       ETH=0 LES=0 total=0
+[2019-06-07 12:31:14:709] [info]:  
+[2019-06-07 12:31:15:469] [info]:  geth: INFO [06-07|12:31:15.469] Using developer account                  address=0xB009d6c0A5b2e063438cc7A96a0Dacb2b87196D3
+[2019-06-07 12:31:15:470] [info]:  
+[2019-06-07 12:31:15:473] [info]:  geth: INFO [06-07|12:31:15.472] Starting peer-to-peer node               instance=Geth/v1.8.23-stable-c9427004/linux-amd64/go1.10.4
+[2019-06-07 12:31:15:473] [info]:  INFO [06-07|12:31:15.472] Allocated cache and file handles         database=/home/x332/Projects/Status/status-teller-network/.embark/development/datadir/geth/chaindata cache=512 handles=2048
+[2019-06-07 12:31:15:473] [info]:  
+[2019-06-07 12:31:15:497] [info]:  geth: INFO [06-07|12:31:15.497] Persisted trie from memory database      nodes=11 size=1.71kB time=48.203µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+[2019-06-07 12:31:15:497] [info]:  
+[2019-06-07 12:31:15:498] [info]:  geth: INFO [06-07|12:31:15.497] Initialised chain configuration          config="{ChainID: 1337 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: 0  ConstantinopleFix: 0 Engine: clique}"
+[2019-06-07 12:31:15:498] [info]:  
+[2019-06-07 12:31:15:498] [info]:  geth: INFO [06-07|12:31:15.497] Initialising Ethereum protocol           versions="[63 62]" network=1337
+[2019-06-07 12:31:15:498] [info]:  
+[2019-06-07 12:31:15:520] [info]:  geth: INFO [06-07|12:31:15.519] Loaded most recent local header          number=184 hash=3be941…078041 td=369 age=34m44s
+[2019-06-07 12:31:15:520] [info]:  INFO [06-07|12:31:15.519] Loaded most recent local full block      number=184 hash=3be941…078041 td=369 age=34m44s
+[2019-06-07 12:31:15:520] [info]:  
+[2019-06-07 12:31:15:520] [info]:  geth: INFO [06-07|12:31:15.519] Loaded most recent local fast block      number=184 hash=3be941…078041 td=369 age=34m44s
+[2019-06-07 12:31:15:520] [info]:  
+[2019-06-07 12:31:15:524] [info]:  geth: INFO [06-07|12:31:15.523] Loaded local transaction journal         transactions=13 dropped=13
+[2019-06-07 12:31:15:524] [info]:  
+[2019-06-07 12:31:15:524] [info]:  geth: INFO [06-07|12:31:15.523] Regenerated local transaction journal    transactions=0  accounts=0
+[2019-06-07 12:31:15:524] [info]:  
+[2019-06-07 12:31:15:524] [info]:  geth: WARN [06-07|12:31:15.523] Blockchain not empty, fast sync disabled 
+[2019-06-07 12:31:15:524] [info]:  
+[2019-06-07 12:31:15:549] [info]:  geth: INFO [06-07|12:31:15.548] started whisper v.6.0 
+[2019-06-07 12:31:15:549] [info]:  
+[2019-06-07 12:31:15:549] [info]:  geth: INFO [06-07|12:31:15.549] New local node record                    seq=24 id=3222c3cc0ab99938 ip=127.0.0.1 udp=0 tcp=38535
+[2019-06-07 12:31:15:549] [info]:  
+[2019-06-07 12:31:15:550] [info]:  geth: INFO [06-07|12:31:15.549] Started P2P networking                   self="enode://ef42ab0ceb212af4699fdeccdd7e6b5391f5077627173ab217af22b3d0a2bffbd3519f75a51e5fab4631dd99ad84ab5ec90ebebb840243ee6a936af7c28729d5@127.0.0.1:38535?discport=0"
+[2019-06-07 12:31:15:550] [info]:  
+[2019-06-07 12:31:15:550] [info]:  geth: INFO [06-07|12:31:15.550] IPC endpoint opened                      url=/tmp/embark-2da1dbbf/geth.ipc
+[2019-06-07 12:31:15:550] [info]:  
+[2019-06-07 12:31:15:551] [info]:  geth: INFO [06-07|12:31:15.550] HTTP endpoint opened                     url=http://localhost:8555         cors=*,http://localhost:8000,http://localhost:8080,http://embark vhosts=localhost
+[2019-06-07 12:31:15:551] [info]:  
+[2019-06-07 12:31:15:685] [info]:  [36mBlockchain node is ready[39m
+[2019-06-07 12:31:15:686] [info]:  geth: INFO [06-07|12:31:15.551] WebSocket endpoint opened                url=ws://127.0.0.1:8556
+[2019-06-07 12:31:15:686] [info]:  
+[2019-06-07 12:31:15:818] [trace]:  add check: Whisper
+[2019-06-07 12:31:15:838] [info]:  geth: INFO [06-07|12:31:15.836] Etherbase automatically configured       address=0xB009d6c0A5b2e063438cc7A96a0Dacb2b87196D3
+[2019-06-07 12:31:15:839] [info]:  
+[2019-06-07 12:31:15:844] [info]:  geth: INFO [06-07|12:31:15.843] Setting new local account                address=0xB009d6c0A5b2e063438cc7A96a0Dacb2b87196D3
+[2019-06-07 12:31:15:845] [info]:  
+[2019-06-07 12:31:15:845] [info]:  geth: INFO [06-07|12:31:15.843] Submitted transaction                    fullhash=0xa9ccdf161f3e86e89b4c693e2363544a4de33a872484447f9c559045e9429fce recipient=0xEF7e02309Aa2ed0f35EDE5b1eDaCEdFb48F407Ef
+[2019-06-07 12:31:15:845] [info]:  
+[2019-06-07 12:31:15:905] [debug]:  IPFS error: ERROR: ld.so: object '/lib/$LIB/liblsp.so' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[2019-06-07 12:31:15:905] [debug]:  
+[2019-06-07 12:31:15:910] [debug]:  IPFS error: ERROR: ld.so: object '/lib/$LIB/liblsp.so' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[2019-06-07 12:31:15:911] [debug]:  
+[2019-06-07 12:31:15:911] [debug]:  IPFS error: ERROR: ld.so: object '/lib/$LIB/liblsp.so' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[2019-06-07 12:31:15:911] [debug]:  
+[2019-06-07 12:31:15:950] [debug]:  IPFS: Initializing daemon...
+[2019-06-07 12:31:15:950] [debug]:  go-ipfs version: 0.4.19-83d3f7672
+[2019-06-07 12:31:15:950] [debug]:  Repo version: 7
+[2019-06-07 12:31:15:950] [debug]:  System version: amd64/linux
+[2019-06-07 12:31:15:951] [debug]:  Golang version: go1.11.5
+[2019-06-07 12:31:15:951] [debug]:  
+[2019-06-07 12:31:16:415] [info]:  geth: INFO [06-07|12:31:16.415] Unlocked account                         address=0x002bF1F1A26ef715d395aDDa31965942Ff16DeB2
+[2019-06-07 12:31:16:415] [info]:  
+[2019-06-07 12:31:16:415] [info]:  geth: INFO [06-07|12:31:16.415] Transaction pool price threshold updated price=1000000000
+[2019-06-07 12:31:16:416] [info]:  INFO [06-07|12:31:16.415] Transaction pool price threshold updated price=1
+[2019-06-07 12:31:16:416] [info]:  
+[2019-06-07 12:31:16:416] [info]:  geth: INFO [06-07|12:31:16.415] Commit new mining work                   number=185 sealhash=6d6d45…4be628 uncles=0 txs=0 gas=0 fees=0 elapsed=89.693µs
+[2019-06-07 12:31:16:416] [info]:  
+[2019-06-07 12:31:16:416] [info]:  geth: INFO [06-07|12:31:16.415] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:16:416] [info]:  
+[2019-06-07 12:31:16:416] [info]:  geth: INFO [06-07|12:31:16.415] Commit new mining work                   number=185 sealhash=ff042a…39276e uncles=0 txs=1 gas=21000 fees=2.1e-14 elapsed=313.941µs
+[2019-06-07 12:31:16:417] [info]:  
+[2019-06-07 12:31:16:417] [info]:  geth: INFO [06-07|12:31:16.416] Successfully sealed new block            number=185 sealhash=ff042a…39276e hash=ea34e2…dac2e7 elapsed=526.561µs
+[2019-06-07 12:31:16:417] [info]:  
+[2019-06-07 12:31:16:417] [info]:  geth: INFO [06-07|12:31:16.416] 🔨 mined potential block                  number=185 hash=ea34e2…dac2e7
+[2019-06-07 12:31:16:417] [info]:  
+[2019-06-07 12:31:16:417] [info]:  geth: INFO [06-07|12:31:16.416] Commit new mining work                   number=186 sealhash=ab62b2…d7735f uncles=0 txs=0 gas=0     fees=0       elapsed=451.142µs
+[2019-06-07 12:31:16:417] [info]:  INFO [06-07|12:31:16.416] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:16:418] [info]:  
+[2019-06-07 12:31:17:760] [info]:  Ethereum node detected..
+[2019-06-07 12:31:17:786] [dir]:  warning: .secret.json file not found; this is only needed to deploy to testnet or livenet etc..
+[2019-06-07 12:31:17:804] [info]:  embark-solc: compiling solidity contracts with command line solc...
+[2019-06-07 12:31:18:244] [trace]:  IPFS unavailable
+[2019-06-07 12:31:18:998] [warning]:  embark-solc: /home/x332/Projects/Status/status-teller-network/.embark/contracts/teller-network/Escrow.sol:84:5: Warning: Variable is shadowed in inline assembly by an instruction of the same name
+    function create(
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+[2019-06-07 12:31:18:999] [warning]:  embark-solc: /home/x332/Projects/Status/status-teller-network/.embark/contracts/token/MiniMeToken.sol:274:75: Warning: Unused function parameter. Remove or comment out the variable name to silence this warning.
+    function approve(address _spender, uint256 _amount) external returns (bool success) {
+                                                                          ^----------^
+
+[2019-06-07 12:31:18:999] [warning]:  embark-solc: /home/x332/Projects/Status/status-teller-network/.embark/contracts/teller-network/MetadataStore.sol:110:5: Warning: Function state mutability can be restricted to view
+    function getSigner(string memory _username, 
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+[2019-06-07 12:31:19:009] [info]:  assuming Controlled to be an interface
+[2019-06-07 12:31:19:014] [info]:  assuming MessageSigned to be an interface
+[2019-06-07 12:31:19:015] [info]:  assuming Ownable to be an interface
+[2019-06-07 12:31:19:015] [info]:  assuming Pausable to be an interface
+[2019-06-07 12:31:19:015] [info]:  assuming Arbitrable to be an interface
+[2019-06-07 12:31:19:015] [info]:  assuming ApproveAndCallFallBack to be an interface
+[2019-06-07 12:31:19:015] [info]:  assuming ERC20Token to be an interface
+[2019-06-07 12:31:19:015] [info]:  assuming MiniMeTokenInterface to be an interface
+[2019-06-07 12:31:19:016] [info]:  assuming TokenController to be an interface
+[2019-06-07 12:31:19:016] [info]:  assuming TokenFactory to be an interface
+[2019-06-07 12:31:19:074] [trace]:  [object Object]
+[2019-06-07 12:31:19:075] [trace]:  [4mfinished[24m
+[2019-06-07 12:31:19:080] [info]:  deploying contracts
+[2019-06-07 12:31:19:080] [info]:  Executing pre-deploy actions...
+[2019-06-07 12:31:19:095] [info]:  geth: INFO [06-07|12:31:19.095] Submitted contract creation              fullhash=0xe59c4626626ef68f63581f07959443ed4805a33e64ace1fa08566380d1c27eab contract=0x1175693669BD5298357f58a6D23a414F69086757
+[2019-06-07 12:31:19:095] [info]:  
+[2019-06-07 12:31:19:096] [trace]:  deploying [36m[1mENSRegistry[22m[39m [32mwith[39m 565798 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 565798[32m Wei[39m (txHash: [36m[1m0xe59c4626626ef68f63581f07959443ed4805a33e64ace1fa08566380d1c27eab[22m[39m)
+[2019-06-07 12:31:19:097] [info]:  geth: INFO [06-07|12:31:19.095] Commit new mining work                   number=186 sealhash=39bc3c…b5c29f uncles=0 txs=0 gas=0     fees=0       elapsed=49.539µs
+[2019-06-07 12:31:19:097] [info]:  INFO [06-07|12:31:19.095] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:097] [info]:  INFO [06-07|12:31:19.095] Commit new mining work                   number=186 sealhash=778976…a449cf uncles=0 txs=1 gas=518184 fees=5.18184e-13 elapsed=293.803µs
+[2019-06-07 12:31:19:097] [info]:  
+[2019-06-07 12:31:19:098] [info]:  geth: INFO [06-07|12:31:19.096] Successfully sealed new block            number=186 sealhash=778976…a449cf hash=75fadb…274727 elapsed=492.866µs
+[2019-06-07 12:31:19:098] [info]:  
+[2019-06-07 12:31:19:098] [info]:  geth: INFO [06-07|12:31:19.096] 🔨 mined potential block                  number=186 hash=75fadb…274727
+[2019-06-07 12:31:19:098] [info]:  
+[2019-06-07 12:31:19:098] [info]:  geth: INFO [06-07|12:31:19.096] Commit new mining work                   number=187 sealhash=fc7632…ecd26f uncles=0 txs=0 gas=0      fees=0           elapsed=309.647µs
+[2019-06-07 12:31:19:098] [info]:  INFO [06-07|12:31:19.096] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:098] [info]:  
+[2019-06-07 12:31:19:102] [trace]:  [36m[1mENSRegistry[22m[39m [32mdeployed at[39m [36m[1m0x1175693669BD5298357f58a6D23a414F69086757[22m[39m [32musing[39m 518184 [32mgas[39m (txHash: [36m[1m0xe59c4626626ef68f63581f07959443ed4805a33e64ace1fa08566380d1c27eab[22m[39m)
+[2019-06-07 12:31:19:120] [info]:  geth: INFO [06-07|12:31:19.120] Submitted contract creation              fullhash=0x5a1f8e0937d649ebcd1579e5d254e4998d7c58fb3ec54c117a15b29b72866da8 contract=0x6D3A52088D7EeC6c7587D8b2F6C23B32D111E604
+[2019-06-07 12:31:19:121] [info]:  
+[2019-06-07 12:31:19:121] [info]:  geth: INFO [06-07|12:31:19.120] Commit new mining work                   number=187 sealhash=fc7632…ecd26f uncles=0 txs=0 gas=0      fees=0           elapsed=102.181µs
+[2019-06-07 12:31:19:121] [info]:  INFO [06-07|12:31:19.121] Commit new mining work                   number=187 sealhash=948333…702a23 uncles=0 txs=1 gas=934121 fees=9.34121e-13 elapsed=528.333µs
+[2019-06-07 12:31:19:122] [info]:  
+[2019-06-07 12:31:19:122] [trace]:  deploying [36m[1mResolver[22m[39m [32mwith[39m 953766 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 953766[32m Wei[39m (txHash: [36m[1m0x5a1f8e0937d649ebcd1579e5d254e4998d7c58fb3ec54c117a15b29b72866da8[22m[39m)
+[2019-06-07 12:31:19:123] [info]:  geth: INFO [06-07|12:31:19.121] Successfully sealed new block            number=187 sealhash=948333…702a23 hash=56a392…214c8a elapsed=609.269µs
+[2019-06-07 12:31:19:124] [info]:  INFO [06-07|12:31:19.121] 🔨 mined potential block                  number=187 hash=56a392…214c8a
+[2019-06-07 12:31:19:124] [info]:  
+[2019-06-07 12:31:19:124] [info]:  geth: INFO [06-07|12:31:19.122] Commit new mining work                   number=188 sealhash=8f791b…5e6d54 uncles=0 txs=0 gas=0      fees=0           elapsed=426.332µs
+[2019-06-07 12:31:19:124] [info]:  INFO [06-07|12:31:19.122] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:124] [info]:  
+[2019-06-07 12:31:19:128] [trace]:  [36m[1mResolver[22m[39m [32mdeployed at[39m [36m[1m0x6D3A52088D7EeC6c7587D8b2F6C23B32D111E604[22m[39m [32musing[39m 934121 [32mgas[39m (txHash: [36m[1m0x5a1f8e0937d649ebcd1579e5d254e4998d7c58fb3ec54c117a15b29b72866da8[22m[39m)
+[2019-06-07 12:31:19:150] [info]:  geth: INFO [06-07|12:31:19.149] Submitted contract creation              fullhash=0x5024c0d59f3d249da2e3464d850387708f38a49e019971fffb8adad6570ffbc0 contract=0x2659ECdc5f7889543E34383F98DF681a74B784F0
+[2019-06-07 12:31:19:150] [info]:  
+[2019-06-07 12:31:19:150] [trace]:  deploying [36m[1mFIFSRegistrar[22m[39m [32mwith[39m 298607 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 298607[32m Wei[39m (txHash: [36m[1m0x5024c0d59f3d249da2e3464d850387708f38a49e019971fffb8adad6570ffbc0[22m[39m)
+[2019-06-07 12:31:19:152] [info]:  geth: INFO [06-07|12:31:19.149] Commit new mining work                   number=188 sealhash=8f791b…5e6d54 uncles=0 txs=0 gas=0      fees=0           elapsed=53.139µs
+[2019-06-07 12:31:19:152] [info]:  INFO [06-07|12:31:19.150] Commit new mining work                   number=188 sealhash=5973e4…833cf7 uncles=0 txs=1 gas=279560 fees=2.7956e-13  elapsed=340.622µs
+[2019-06-07 12:31:19:152] [info]:  
+[2019-06-07 12:31:19:152] [info]:  geth: INFO [06-07|12:31:19.150] Successfully sealed new block            number=188 sealhash=5973e4…833cf7 hash=0aee82…38c223 elapsed=542.13µs
+[2019-06-07 12:31:19:152] [info]:  
+[2019-06-07 12:31:19:153] [info]:  geth: INFO [06-07|12:31:19.150] 🔨 mined potential block                  number=188 hash=0aee82…38c223
+[2019-06-07 12:31:19:153] [info]:  
+[2019-06-07 12:31:19:153] [info]:  geth: INFO [06-07|12:31:19.151] Commit new mining work                   number=189 sealhash=45f968…f981b5 uncles=0 txs=0 gas=0      fees=0           elapsed=381.71µs
+[2019-06-07 12:31:19:153] [info]:  INFO [06-07|12:31:19.151] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:153] [info]:  
+[2019-06-07 12:31:19:157] [trace]:  [36m[1mFIFSRegistrar[22m[39m [32mdeployed at[39m [36m[1m0x2659ECdc5f7889543E34383F98DF681a74B784F0[22m[39m [32musing[39m 279560 [32mgas[39m (txHash: [36m[1m0x5024c0d59f3d249da2e3464d850387708f38a49e019971fffb8adad6570ffbc0[22m[39m)
+[2019-06-07 12:31:19:171] [info]:  geth: INFO [06-07|12:31:19.170] Submitted transaction                    fullhash=0x58a9aa4219813415c30445fcd123de4a8a69a8b59fda23cc7e8222806c60b649 recipient=0x1175693669BD5298357f58a6D23a414F69086757
+[2019-06-07 12:31:19:171] [info]:  
+[2019-06-07 12:31:19:172] [info]:  geth: INFO [06-07|12:31:19.171] Commit new mining work                   number=189 sealhash=45f968…f981b5 uncles=0 txs=0 gas=0      fees=0           elapsed=77.686µs
+[2019-06-07 12:31:19:173] [info]:  INFO [06-07|12:31:19.171] Commit new mining work                   number=189 sealhash=560e4d…3188cf uncles=0 txs=1 gas=47527  fees=4.7527e-14  elapsed=427.333µs
+[2019-06-07 12:31:19:173] [info]:  
+[2019-06-07 12:31:19:173] [info]:  geth: INFO [06-07|12:31:19.172] Successfully sealed new block            number=189 sealhash=560e4d…3188cf hash=f3042e…3e544d elapsed=743.245µs
+[2019-06-07 12:31:19:173] [info]:  INFO [06-07|12:31:19.172] 🔨 mined potential block                  number=189 hash=f3042e…3e544d
+[2019-06-07 12:31:19:173] [info]:  
+[2019-06-07 12:31:19:174] [info]:  geth: INFO [06-07|12:31:19.172] Commit new mining work                   number=190 sealhash=8149f9…b3c8f7 uncles=0 txs=0 gas=0      fees=0           elapsed=489.097µs
+[2019-06-07 12:31:19:174] [info]:  INFO [06-07|12:31:19.172] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:174] [info]:  
+[2019-06-07 12:31:19:180] [info]:  geth: INFO [06-07|12:31:19.179] Submitted transaction                    fullhash=0x5f9946a06d370b0becaa510f3792a0bbb220dc217168619a6470abe1f6f266d4 recipient=0x1175693669BD5298357f58a6D23a414F69086757
+[2019-06-07 12:31:19:180] [info]:  
+[2019-06-07 12:31:19:180] [info]:  geth: INFO [06-07|12:31:19.179] Commit new mining work                   number=190 sealhash=8149f9…b3c8f7 uncles=0 txs=0 gas=0      fees=0           elapsed=74.339µs
+[2019-06-07 12:31:19:180] [info]:  
+[2019-06-07 12:31:19:180] [info]:  geth: INFO [06-07|12:31:19.179] Commit new mining work                   number=190 sealhash=51f001…b7b15c uncles=0 txs=1 gas=47862  fees=4.7862e-14  elapsed=511.002µs
+[2019-06-07 12:31:19:181] [info]:  
+[2019-06-07 12:31:19:181] [info]:  geth: INFO [06-07|12:31:19.180] Successfully sealed new block            number=190 sealhash=51f001…b7b15c hash=da99ae…b37661 elapsed=483.482µs
+[2019-06-07 12:31:19:181] [info]:  INFO [06-07|12:31:19.180] 🔨 mined potential block                  number=190 hash=da99ae…b37661
+[2019-06-07 12:31:19:181] [info]:  
+[2019-06-07 12:31:19:181] [info]:  geth: INFO [06-07|12:31:19.180] Commit new mining work                   number=191 sealhash=e333a3…a22a96 uncles=0 txs=0 gas=0      fees=0           elapsed=347.038µs
+[2019-06-07 12:31:19:181] [info]:  INFO [06-07|12:31:19.180] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:181] [info]:  
+[2019-06-07 12:31:19:188] [info]:  geth: INFO [06-07|12:31:19.188] Submitted transaction                    fullhash=0xdcb294f88be846eee55874b1b72efcb89a0a43af95bd6d891f7f09bb8cd1ab8e recipient=0x1175693669BD5298357f58a6D23a414F69086757
+[2019-06-07 12:31:19:189] [info]:  
+[2019-06-07 12:31:19:190] [info]:  geth: INFO [06-07|12:31:19.188] Commit new mining work                   number=191 sealhash=e333a3…a22a96 uncles=0 txs=0 gas=0      fees=0           elapsed=62.511µs
+[2019-06-07 12:31:19:190] [info]:  INFO [06-07|12:31:19.188] Commit new mining work                   number=191 sealhash=7ee7b4…51f1c9 uncles=0 txs=1 gas=47508  fees=4.7508e-14  elapsed=366.072µs
+[2019-06-07 12:31:19:191] [info]:  
+[2019-06-07 12:31:19:191] [info]:  geth: INFO [06-07|12:31:19.189] Successfully sealed new block            number=191 sealhash=7ee7b4…51f1c9 hash=0d09ee…b90d76 elapsed=717.517µs
+[2019-06-07 12:31:19:191] [info]:  
+[2019-06-07 12:31:19:191] [info]:  geth: INFO [06-07|12:31:19.189] 🔨 mined potential block                  number=191 hash=0d09ee…b90d76
+[2019-06-07 12:31:19:191] [info]:  
+[2019-06-07 12:31:19:192] [info]:  geth: INFO [06-07|12:31:19.190] Commit new mining work                   number=192 sealhash=f59409…49a4ad uncles=0 txs=0 gas=0      fees=0           elapsed=487.37µs
+[2019-06-07 12:31:19:192] [info]:  INFO [06-07|12:31:19.190] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:193] [info]:  
+[2019-06-07 12:31:19:198] [info]:  geth: INFO [06-07|12:31:19.198] Submitted transaction                    fullhash=0x3316a288790f6f62df6d968ccf2d85307bff7827de3daa9da588e0da3a890da3 recipient=0x6D3A52088D7EeC6c7587D8b2F6C23B32D111E604
+[2019-06-07 12:31:19:198] [info]:  
+[2019-06-07 12:31:19:200] [info]:  geth: INFO [06-07|12:31:19.198] Commit new mining work                   number=192 sealhash=f59409…49a4ad uncles=0 txs=0 gas=0      fees=0           elapsed=67.492µs
+[2019-06-07 12:31:19:200] [info]:  INFO [06-07|12:31:19.198] Commit new mining work                   number=192 sealhash=15d422…bcfafe uncles=0 txs=1 gas=46946  fees=4.6946e-14  elapsed=419.341µs
+[2019-06-07 12:31:19:200] [info]:  
+[2019-06-07 12:31:19:200] [info]:  geth: INFO [06-07|12:31:19.199] Successfully sealed new block            number=192 sealhash=15d422…bcfafe hash=9b074a…79a0fb elapsed=867.118µs
+[2019-06-07 12:31:19:200] [info]:  
+[2019-06-07 12:31:19:201] [info]:  geth: INFO [06-07|12:31:19.199] 🔗 block reached canonical chain          number=185 hash=ea34e2…dac2e7
+[2019-06-07 12:31:19:201] [info]:  INFO [06-07|12:31:19.199] 🔨 mined potential block                  number=192 hash=9b074a…79a0fb
+[2019-06-07 12:31:19:201] [info]:  
+[2019-06-07 12:31:19:202] [info]:  geth: INFO [06-07|12:31:19.200] Commit new mining work                   number=193 sealhash=1ecdda…18ffa6 uncles=0 txs=0 gas=0      fees=0           elapsed=679.923µs
+[2019-06-07 12:31:19:202] [info]:  INFO [06-07|12:31:19.200] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:202] [info]:  
+[2019-06-07 12:31:19:208] [info]:  geth: INFO [06-07|12:31:19.207] Submitted transaction                    fullhash=0x665df80c71379fb734d6e84abd6f513cba0cbab8659114fb6b6746ecbcca9a45 recipient=0x6D3A52088D7EeC6c7587D8b2F6C23B32D111E604
+[2019-06-07 12:31:19:208] [info]:  
+[2019-06-07 12:31:19:208] [info]:  geth: INFO [06-07|12:31:19.207] Commit new mining work                   number=193 sealhash=1ecdda…18ffa6 uncles=0 txs=0 gas=0      fees=0           elapsed=58.569µs
+[2019-06-07 12:31:19:208] [info]:  INFO [06-07|12:31:19.207] Commit new mining work                   number=193 sealhash=977ff2…17f29b uncles=0 txs=1 gas=48038  fees=4.8038e-14  elapsed=371.587µs
+[2019-06-07 12:31:19:208] [info]:  
+[2019-06-07 12:31:19:209] [info]:  geth: INFO [06-07|12:31:19.208] Successfully sealed new block            number=193 sealhash=977ff2…17f29b hash=3955ca…0e4f77 elapsed=618.461µs
+[2019-06-07 12:31:19:209] [info]:  
+[2019-06-07 12:31:19:209] [info]:  geth: INFO [06-07|12:31:19.208] 🔗 block reached canonical chain          number=186 hash=75fadb…274727
+[2019-06-07 12:31:19:209] [info]:  INFO [06-07|12:31:19.208] 🔨 mined potential block                  number=193 hash=3955ca…0e4f77
+[2019-06-07 12:31:19:209] [info]:  
+[2019-06-07 12:31:19:210] [info]:  geth: INFO [06-07|12:31:19.208] Commit new mining work                   number=194 sealhash=94969e…713da6 uncles=0 txs=0 gas=0      fees=0           elapsed=399.917µs
+[2019-06-07 12:31:19:210] [info]:  INFO [06-07|12:31:19.209] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:210] [info]:  
+[2019-06-07 12:31:19:228] [info]:  geth: INFO [06-07|12:31:19.227] Submitted transaction                    fullhash=0xec108fe8c94e0075615960084252e3f23ad2cb6f59b40ee5e4d9782dc06938ea recipient=0x1175693669BD5298357f58a6D23a414F69086757
+[2019-06-07 12:31:19:228] [info]:  
+[2019-06-07 12:31:19:228] [info]:  geth: INFO [06-07|12:31:19.227] Commit new mining work                   number=194 sealhash=94969e…713da6 uncles=0 txs=0 gas=0      fees=0           elapsed=48.318µs
+[2019-06-07 12:31:19:228] [info]:  
+[2019-06-07 12:31:19:229] [info]:  geth: INFO [06-07|12:31:19.228] Commit new mining work                   number=194 sealhash=d8c89c…70fb91 uncles=0 txs=1 gas=50901  fees=5.0901e-14  elapsed=350.285µs
+[2019-06-07 12:31:19:230] [info]:  
+[2019-06-07 12:31:19:230] [info]:  geth: INFO [06-07|12:31:19.228] Successfully sealed new block            number=194 sealhash=d8c89c…70fb91 hash=98e623…c8514a elapsed=500.333µs
+[2019-06-07 12:31:19:230] [info]:  INFO [06-07|12:31:19.228] 🔗 block reached canonical chain          number=187 hash=56a392…214c8a
+[2019-06-07 12:31:19:230] [info]:  INFO [06-07|12:31:19.228] 🔨 mined potential block                  number=194 hash=98e623…c8514a
+[2019-06-07 12:31:19:230] [info]:  
+[2019-06-07 12:31:19:231] [info]:  geth: INFO [06-07|12:31:19.229] Commit new mining work                   number=195 sealhash=250bb6…8342b7 uncles=0 txs=0 gas=0      fees=0           elapsed=329.658µs
+[2019-06-07 12:31:19:231] [info]:  INFO [06-07|12:31:19.229] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:232] [info]:  
+[2019-06-07 12:31:19:237] [info]:  geth: INFO [06-07|12:31:19.235] Submitted transaction                    fullhash=0xcc70c6a6be117854a1518ee04a3f6fbf469b6cd9035bdc19174b5e881e0ebb45 recipient=0x1175693669BD5298357f58a6D23a414F69086757
+[2019-06-07 12:31:19:237] [info]:  
+[2019-06-07 12:31:19:237] [info]:  geth: INFO [06-07|12:31:19.235] Commit new mining work                   number=195 sealhash=250bb6…8342b7 uncles=0 txs=0 gas=0      fees=0           elapsed=72.713µs
+[2019-06-07 12:31:19:237] [info]:  INFO [06-07|12:31:19.236] Commit new mining work                   number=195 sealhash=3cf6d8…eb27a8 uncles=0 txs=1 gas=47444  fees=4.7444e-14  elapsed=369.398µs
+[2019-06-07 12:31:19:238] [info]:  
+[2019-06-07 12:31:19:238] [info]:  geth: INFO [06-07|12:31:19.236] Successfully sealed new block            number=195 sealhash=3cf6d8…eb27a8 hash=401220…8fe1ca elapsed=487.377µs
+[2019-06-07 12:31:19:238] [info]:  INFO [06-07|12:31:19.236] 🔗 block reached canonical chain          number=188 hash=0aee82…38c223
+[2019-06-07 12:31:19:238] [info]:  INFO [06-07|12:31:19.236] 🔨 mined potential block                  number=195 hash=401220…8fe1ca
+[2019-06-07 12:31:19:238] [info]:  
+[2019-06-07 12:31:19:238] [info]:  geth: INFO [06-07|12:31:19.236] Commit new mining work                   number=196 sealhash=9205b0…ad0732 uncles=0 txs=0 gas=0      fees=0           elapsed=310.327µs
+[2019-06-07 12:31:19:238] [info]:  INFO [06-07|12:31:19.237] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:238] [info]:  
+[2019-06-07 12:31:19:244] [info]:  geth: INFO [06-07|12:31:19.244] Submitted transaction                    fullhash=0x4d6701f2a8f1148e17ce77f5c16c8b69644151798442376ed2f3a4d43f60e3a1 recipient=0x6D3A52088D7EeC6c7587D8b2F6C23B32D111E604
+[2019-06-07 12:31:19:244] [info]:  
+[2019-06-07 12:31:19:246] [info]:  geth: INFO [06-07|12:31:19.244] Commit new mining work                   number=196 sealhash=9205b0…ad0732 uncles=0 txs=0 gas=0      fees=0           elapsed=90.483µs
+[2019-06-07 12:31:19:246] [info]:  INFO [06-07|12:31:19.244] Commit new mining work                   number=196 sealhash=24169e…e71c27 uncles=0 txs=1 gas=46882  fees=4.6882e-14  elapsed=481.407µs
+[2019-06-07 12:31:19:246] [info]:  
+[2019-06-07 12:31:19:246] [info]:  geth: INFO [06-07|12:31:19.245] Successfully sealed new block            number=196 sealhash=24169e…e71c27 hash=a11221…a6bef9 elapsed=606.813µs
+[2019-06-07 12:31:19:247] [info]:  INFO [06-07|12:31:19.245] 🔗 block reached canonical chain          number=189 hash=f3042e…3e544d
+[2019-06-07 12:31:19:247] [info]:  INFO [06-07|12:31:19.245] 🔨 mined potential block                  number=196 hash=a11221…a6bef9
+[2019-06-07 12:31:19:247] [info]:  
+[2019-06-07 12:31:19:248] [info]:  geth: INFO [06-07|12:31:19.246] Commit new mining work                   number=197 sealhash=8ead64…affbfe uncles=0 txs=0 gas=0      fees=0           elapsed=499.639µs
+[2019-06-07 12:31:19:248] [info]:  INFO [06-07|12:31:19.246] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:248] [info]:  
+[2019-06-07 12:31:19:256] [info]:  geth: INFO [06-07|12:31:19.255] Submitted transaction                    fullhash=0xdc499a55dd07c5ae82767502d9207cc760620052afe98a30adb6dda3cfda79ba recipient=0x1175693669BD5298357f58a6D23a414F69086757
+[2019-06-07 12:31:19:256] [info]:  
+[2019-06-07 12:31:19:257] [info]:  geth: INFO [06-07|12:31:19.255] Commit new mining work                   number=197 sealhash=8ead64…affbfe uncles=0 txs=0 gas=0      fees=0           elapsed=117.034µs
+[2019-06-07 12:31:19:257] [info]:  
+[2019-06-07 12:31:19:258] [info]:  geth: INFO [06-07|12:31:19.256] Commit new mining work                   number=197 sealhash=1d4d51…ab9287 uncles=0 txs=1 gas=47508  fees=4.7508e-14  elapsed=748.433µs
+[2019-06-07 12:31:19:258] [info]:  
+[2019-06-07 12:31:19:259] [info]:  geth: INFO [06-07|12:31:19.257] Successfully sealed new block            number=197 sealhash=1d4d51…ab9287 hash=4dd18a…143282 elapsed=826.885µs
+[2019-06-07 12:31:19:259] [info]:  INFO [06-07|12:31:19.257] 🔗 block reached canonical chain          number=190 hash=da99ae…b37661
+[2019-06-07 12:31:19:259] [info]:  INFO [06-07|12:31:19.257] 🔨 mined potential block                  number=197 hash=4dd18a…143282
+[2019-06-07 12:31:19:259] [info]:  
+[2019-06-07 12:31:19:262] [info]:  geth: INFO [06-07|12:31:19.257] Commit new mining work                   number=198 sealhash=9a1c98…17a1bf uncles=0 txs=0 gas=0      fees=0           elapsed=464.209µs
+[2019-06-07 12:31:19:262] [info]:  INFO [06-07|12:31:19.257] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:262] [info]:  
+[2019-06-07 12:31:19:265] [info]:  geth: INFO [06-07|12:31:19.265] Submitted transaction                    fullhash=0xfcf271d91f918cc9a15564d383a5920464da2339ca5dbc85283df194c91b58e1 recipient=0x6D3A52088D7EeC6c7587D8b2F6C23B32D111E604
+[2019-06-07 12:31:19:266] [info]:  
+[2019-06-07 12:31:19:266] [info]:  geth: INFO [06-07|12:31:19.265] Commit new mining work                   number=198 sealhash=9a1c98…17a1bf uncles=0 txs=0 gas=0      fees=0           elapsed=61.877µs
+[2019-06-07 12:31:19:266] [info]:  INFO [06-07|12:31:19.266] Commit new mining work                   number=198 sealhash=efe3b3…ba037e uncles=0 txs=1 gas=48486  fees=4.8486e-14  elapsed=373.68µs
+[2019-06-07 12:31:19:266] [info]:  
+[2019-06-07 12:31:19:267] [info]:  geth: INFO [06-07|12:31:19.266] Successfully sealed new block            number=198 sealhash=efe3b3…ba037e hash=72f5e8…e0baae elapsed=557.072µs
+[2019-06-07 12:31:19:267] [info]:  
+[2019-06-07 12:31:19:267] [info]:  geth: INFO [06-07|12:31:19.266] 🔗 block reached canonical chain          number=191 hash=0d09ee…b90d76
+[2019-06-07 12:31:19:267] [info]:  INFO [06-07|12:31:19.266] 🔨 mined potential block                  number=198 hash=72f5e8…e0baae
+[2019-06-07 12:31:19:267] [info]:  
+[2019-06-07 12:31:19:268] [info]:  geth: INFO [06-07|12:31:19.266] Commit new mining work                   number=199 sealhash=df6e16…bd38e6 uncles=0 txs=0 gas=0      fees=0           elapsed=337.778µs
+[2019-06-07 12:31:19:269] [info]:  INFO [06-07|12:31:19.267] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:269] [info]:  
+[2019-06-07 12:31:19:272] [info]:  Pre-deploy actions done. Deploying contracts
+[2019-06-07 12:31:19:298] [info]:  deploying [36m[1mStandardToken[22m[39m [32mwith[39m 360486 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 360486[32m Wei[39m (txHash: [36m[1m0x5ef1d0afd1a44ba1f0325d02e53d8292d9d23def703472d13fffe4797a3f5e46[22m[39m)
+[2019-06-07 12:31:19:299] [info]:  geth: INFO [06-07|12:31:19.297] Submitted contract creation              fullhash=0x5ef1d0afd1a44ba1f0325d02e53d8292d9d23def703472d13fffe4797a3f5e46 contract=0x99364F2b398edFCF242D7506ce35AF781df518Ce
+[2019-06-07 12:31:19:299] [info]:  INFO [06-07|12:31:19.297] Commit new mining work                   number=199 sealhash=df6e16…bd38e6 uncles=0 txs=0 gas=0      fees=0           elapsed=91.719µs
+[2019-06-07 12:31:19:299] [info]:  
+[2019-06-07 12:31:19:300] [info]:  geth: INFO [06-07|12:31:19.298] Commit new mining work                   number=199 sealhash=2cd677…d71025 uncles=0 txs=1 gas=346019 fees=3.46019e-13 elapsed=441.474µs
+[2019-06-07 12:31:19:300] [info]:  INFO [06-07|12:31:19.298] Submitted contract creation              fullhash=0xb5e07b8c15280650d56f24ab4e273757903494a7a3979d7e268a687fcca3ff5b contract=0xaa8d6c458012d9Ce80704fC807D250cD5a0DA8aC
+[2019-06-07 12:31:19:300] [info]:  INFO [06-07|12:31:19.298] Commit new mining work                   number=199 sealhash=df6e16…bd38e6 uncles=0 txs=0 gas=0      fees=0           elapsed=54.22µs
+[2019-06-07 12:31:19:300] [info]:  INFO [06-07|12:31:19.298] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:300] [info]:  
+[2019-06-07 12:31:19:301] [info]:  geth: INFO [06-07|12:31:19.298] Successfully sealed new block            number=199 sealhash=2cd677…d71025 hash=a2c0cb…40c455 elapsed=753.626µs
+[2019-06-07 12:31:19:301] [info]:  INFO [06-07|12:31:19.299] 🔗 block reached canonical chain          number=192 hash=9b074a…79a0fb
+[2019-06-07 12:31:19:301] [info]:  INFO [06-07|12:31:19.299] 🔨 mined potential block                  number=199 hash=a2c0cb…40c455
+[2019-06-07 12:31:19:302] [info]:  INFO [06-07|12:31:19.299] Commit new mining work                   number=199 sealhash=150ff0…7b30e7 uncles=0 txs=2 gas=692038 fees=6.92038e-13 elapsed=495.181µs
+[2019-06-07 12:31:19:302] [info]:  INFO [06-07|12:31:19.299] Submitted contract creation              fullhash=0x2865acaee86bc9b784411ad0ef349b86969952dbf4b2a729173720831aeb7f9d contract=0xC31EC2E8c6c2F8BB793797FE3A725af2aCE474F8
+[2019-06-07 12:31:19:302] [info]:  INFO [06-07|12:31:19.299] Commit new mining work                   number=200 sealhash=09d5ee…3f7eca uncles=0 txs=0 gas=0      fees=0           elapsed=598.332µs
+[2019-06-07 12:31:19:302] [info]:  INFO [06-07|12:31:19.300] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:302] [info]:  INFO [06-07|12:31:19.299] Successfully sealed new block            number=199 sealhash=150ff0…7b30e7 hash=2963f9…898e9b elapsed=750.508µs
+[2019-06-07 12:31:19:302] [info]:  INFO [06-07|12:31:19.300] 🔨 mined potential block                  number=199 hash=2963f9…898e9b
+[2019-06-07 12:31:19:302] [info]:  
+[2019-06-07 12:31:19:303] [info]:  deploying [36m[1mDAI[22m[39m [32mwith[39m 373192 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 373192[32m Wei[39m (txHash: [36m[1m0xb5e07b8c15280650d56f24ab4e273757903494a7a3979d7e268a687fcca3ff5b[22m[39m)
+[2019-06-07 12:31:19:303] [info]:  geth: INFO [06-07|12:31:19.300] Commit new mining work                   number=200 sealhash=e86e00…6cbace uncles=0 txs=2 gas=820750 fees=8.2075e-13  elapsed=1.078ms
+[2019-06-07 12:31:19:304] [info]:  INFO [06-07|12:31:19.300] Submitted contract creation              fullhash=0xfc5afe21cbb12a19ba0d2bfefb81471da9ab3d12e69b362b45ba5bb9ba875192 contract=0x4D70716A6539A851b57fa8567DF6B955E773f992
+[2019-06-07 12:31:19:304] [info]:  INFO [06-07|12:31:19.300] Commit new mining work                   number=200 sealhash=e86e00…6cbace uncles=1 txs=2 gas=820750 fees=8.2075e-13  elapsed=155.478µs
+[2019-06-07 12:31:19:304] [info]:  INFO [06-07|12:31:19.301] Commit new mining work                   number=200 sealhash=09d5ee…3f7eca uncles=1 txs=0 gas=0      fees=0           elapsed=69.787µs
+[2019-06-07 12:31:19:304] [info]:  INFO [06-07|12:31:19.301] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:304] [info]:  INFO [06-07|12:31:19.301] Successfully sealed new block            number=200 sealhash=e86e00…6cbace hash=022aae…8ef4a6 elapsed=844.47µs
+[2019-06-07 12:31:19:304] [info]:  INFO [06-07|12:31:19.301] 🔗 block reached canonical chain          number=193 hash=3955ca…0e4f77
+[2019-06-07 12:31:19:304] [info]:  INFO [06-07|12:31:19.301] 🔨 mined potential block                  number=200 hash=022aae…8ef4a6
+[2019-06-07 12:31:19:304] [info]:  
+[2019-06-07 12:31:19:305] [info]:  geth: INFO [06-07|12:31:19.301] Commit new mining work                   number=200 sealhash=5a1d2c…37beb5 uncles=1 txs=3 gas=1166769 fees=1.166769e-12 elapsed=589.916µs
+[2019-06-07 12:31:19:305] [info]:  INFO [06-07|12:31:19.302] Commit new mining work                   number=201 sealhash=72d14c…c7f183 uncles=1 txs=0 gas=0       fees=0            elapsed=473.637µs
+[2019-06-07 12:31:19:305] [info]:  INFO [06-07|12:31:19.302] Successfully sealed new block            number=200 sealhash=5a1d2c…37beb5 hash=ebbb16…3e76cb elapsed=681.921µs
+[2019-06-07 12:31:19:305] [info]:  INFO [06-07|12:31:19.302] 🔨 mined potential block                  number=200 hash=ebbb16…3e76cb
+[2019-06-07 12:31:19:305] [info]:  INFO [06-07|12:31:19.302] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:305] [info]:  INFO [06-07|12:31:19.302] Commit new mining work                   number=201 sealhash=70fcbd…ef3eac uncles=1 txs=1 gas=346019  fees=3.46019e-13  elapsed=753.933µs
+[2019-06-07 12:31:19:305] [info]:  INFO [06-07|12:31:19.302] Commit new mining work                   number=201 sealhash=70fcbd…ef3eac uncles=2 txs=1 gas=346019  fees=3.46019e-13  elapsed=95.199µs
+[2019-06-07 12:31:19:305] [info]:  
+[2019-06-07 12:31:19:307] [info]:  geth: INFO [06-07|12:31:19.303] Commit new mining work                   number=201 sealhash=72d14c…c7f183 uncles=2 txs=0 gas=0       fees=0            elapsed=89.64µs
+[2019-06-07 12:31:19:307] [info]:  INFO [06-07|12:31:19.303] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:307] [info]:  INFO [06-07|12:31:19.303] Successfully sealed new block            number=201 sealhash=70fcbd…ef3eac hash=16e29b…dae026 elapsed=790.985µs
+[2019-06-07 12:31:19:307] [info]:  INFO [06-07|12:31:19.303] Commit new mining work                   number=201 sealhash=70fcbd…ef3eac uncles=2 txs=1 gas=346019  fees=3.46019e-13  elapsed=310.164µs
+[2019-06-07 12:31:19:307] [info]:  INFO [06-07|12:31:19.303] 🔗 block reached canonical chain          number=194 hash=98e623…c8514a
+[2019-06-07 12:31:19:307] [info]:  INFO [06-07|12:31:19.303] 🔨 mined potential block                  number=201 hash=16e29b…dae026
+[2019-06-07 12:31:19:307] [info]:  INFO [06-07|12:31:19.303] Commit new mining work                   number=202 sealhash=d94077…1aae02 uncles=2 txs=0 gas=0       fees=0            elapsed=458.768µs
+[2019-06-07 12:31:19:307] [info]:  INFO [06-07|12:31:19.303] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:308] [info]:  
+[2019-06-07 12:31:19:308] [info]:  deploying [36m[1mERC20Receiver[22m[39m [32mwith[39m 500834 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 500834[32m Wei[39m (txHash: [36m[1m0x2865acaee86bc9b784411ad0ef349b86969952dbf4b2a729173720831aeb7f9d[22m[39m)
+[2019-06-07 12:31:19:310] [info]:  deploying [36m[1mMKR[22m[39m [32mwith[39m 362836 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 362836[32m Wei[39m (txHash: [36m[1m0xfc5afe21cbb12a19ba0d2bfefb81471da9ab3d12e69b362b45ba5bb9ba875192[22m[39m)
+[2019-06-07 12:31:19:315] [info]:  geth: INFO [06-07|12:31:19.312] Submitted contract creation              fullhash=0x5ead10cf48096443066df8dcf5bdd9a478d7bc8d86b8e997a7b630c6b70167f3 contract=0x277BF08c99E9D48e77192D1BDF5803809462e35a
+[2019-06-07 12:31:19:316] [info]:  
+[2019-06-07 12:31:19:316] [info]:  geth: INFO [06-07|12:31:19.312] Commit new mining work                   number=202 sealhash=d94077…1aae02 uncles=2 txs=0 gas=0       fees=0            elapsed=114.789µs
+[2019-06-07 12:31:19:316] [info]:  INFO [06-07|12:31:19.313] Commit new mining work                   number=202 sealhash=6da5fa…6f1179 uncles=2 txs=1 gas=2327575 fees=2.327575e-12 elapsed=438.424µs
+[2019-06-07 12:31:19:316] [info]:  
+[2019-06-07 12:31:19:316] [info]:  geth: INFO [06-07|12:31:19.314] Successfully sealed new block            number=202 sealhash=6da5fa…6f1179 hash=a4b872…3d1cbb elapsed=951.713µs
+[2019-06-07 12:31:19:316] [info]:  INFO [06-07|12:31:19.314] 🔗 block reached canonical chain          number=195 hash=401220…8fe1ca
+[2019-06-07 12:31:19:316] [info]:  INFO [06-07|12:31:19.314] 🔨 mined potential block                  number=202 hash=a4b872…3d1cbb
+[2019-06-07 12:31:19:316] [info]:  INFO [06-07|12:31:19.314] Commit new mining work                   number=203 sealhash=8f3efc…a558de uncles=2 txs=0 gas=0       fees=0            elapsed=540.88µs
+[2019-06-07 12:31:19:317] [info]:  INFO [06-07|12:31:19.314] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:317] [info]:  
+[2019-06-07 12:31:19:317] [info]:  [36m[1mStandardToken[22m[39m [32mdeployed at[39m [36m[1m0x99364F2b398edFCF242D7506ce35AF781df518Ce[22m[39m [32musing[39m 346019 [32mgas[39m (txHash: [36m[1m0x5ef1d0afd1a44ba1f0325d02e53d8292d9d23def703472d13fffe4797a3f5e46[22m[39m)
+[2019-06-07 12:31:19:323] [info]:  deploying [36m[1mMiniMeTokenFactory[22m[39m [32mwith[39m 2333734 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 2333734[32m Wei[39m (txHash: [36m[1m0x5ead10cf48096443066df8dcf5bdd9a478d7bc8d86b8e997a7b630c6b70167f3[22m[39m)
+[2019-06-07 12:31:19:326] [info]:  [36m[1mDAI[22m[39m [32mdeployed at[39m [36m[1m0xaa8d6c458012d9Ce80704fC807D250cD5a0DA8aC[22m[39m [32musing[39m 346019 [32mgas[39m (txHash: [36m[1m0xb5e07b8c15280650d56f24ab4e273757903494a7a3979d7e268a687fcca3ff5b[22m[39m)
+[2019-06-07 12:31:19:330] [info]:  executing onDeploy commands
+[2019-06-07 12:31:19:332] [info]:  [36m[1mERC20Receiver[22m[39m [32mdeployed at[39m [36m[1m0xC31EC2E8c6c2F8BB793797FE3A725af2aCE474F8[22m[39m [32musing[39m 474731 [32mgas[39m (txHash: [36m[1m0x2865acaee86bc9b784411ad0ef349b86969952dbf4b2a729173720831aeb7f9d[22m[39m)
+[2019-06-07 12:31:19:337] [info]:  [36m[1mMKR[22m[39m [32mdeployed at[39m [36m[1m0x4D70716A6539A851b57fa8567DF6B955E773f992[22m[39m [32musing[39m 346019 [32mgas[39m (txHash: [36m[1m0xfc5afe21cbb12a19ba0d2bfefb81471da9ab3d12e69b362b45ba5bb9ba875192[22m[39m)
+[2019-06-07 12:31:19:343] [info]:  executing onDeploy commands
+[2019-06-07 12:31:19:346] [info]:  ==== executing: DAI.methods.mint('0xB009d6c0A5b2e063438cc7A96a0Dacb2b87196D3', '20000000000000000000').send()
+[2019-06-07 12:31:19:348] [info]:  ==== executing: MKR.methods.mint('0xB009d6c0A5b2e063438cc7A96a0Dacb2b87196D3', '20000000000000000000').send()
+[2019-06-07 12:31:19:349] [info]:  [36m[1mMiniMeTokenFactory[22m[39m [32mdeployed at[39m [36m[1m0x277BF08c99E9D48e77192D1BDF5803809462e35a[22m[39m [32musing[39m 2327575 [32mgas[39m (txHash: [36m[1m0x5ead10cf48096443066df8dcf5bdd9a478d7bc8d86b8e997a7b630c6b70167f3[22m[39m)
+[2019-06-07 12:31:19:359] [info]:  geth: INFO [06-07|12:31:19.356] Submitted transaction                    fullhash=0xa424448159ff22f491e265000a6fb10f5315159ab31c5abfd16f74e647ad2fd5 recipient=0xaa8d6c458012d9Ce80704fC807D250cD5a0DA8aC
+[2019-06-07 12:31:19:359] [info]:  
+[2019-06-07 12:31:19:359] [info]:  geth: INFO [06-07|12:31:19.356] Commit new mining work                   number=203 sealhash=8f3efc…a558de uncles=2 txs=0 gas=0       fees=0            elapsed=139.667µs
+[2019-06-07 12:31:19:359] [info]:  INFO [06-07|12:31:19.356] Submitted transaction                    fullhash=0xc26448e7e4e00134ff60662c556faee8ba1654f35a33ad49050d8be69d5729a9 recipient=0x4D70716A6539A851b57fa8567DF6B955E773f992
+[2019-06-07 12:31:19:359] [info]:  
+[2019-06-07 12:31:19:359] [info]:  geth: INFO [06-07|12:31:19.357] Commit new mining work                   number=203 sealhash=41fb8d…74fc6d uncles=2 txs=2 gas=131630  fees=1.3163e-13   elapsed=1.200ms
+[2019-06-07 12:31:19:359] [info]:  
+[2019-06-07 12:31:19:360] [info]:  geth: INFO [06-07|12:31:19.357] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:360] [info]:  INFO [06-07|12:31:19.357] Commit new mining work                   number=203 sealhash=8f3efc…a558de uncles=2 txs=0 gas=0       fees=0            elapsed=188.825µs
+[2019-06-07 12:31:19:360] [info]:  
+[2019-06-07 12:31:19:360] [info]:  geth: INFO [06-07|12:31:19.358] Successfully sealed new block            number=203 sealhash=41fb8d…74fc6d hash=8eec26…c8c16b elapsed=875.149µs
+[2019-06-07 12:31:19:360] [info]:  INFO [06-07|12:31:19.358] 🔗 block reached canonical chain          number=196 hash=a11221…a6bef9
+[2019-06-07 12:31:19:360] [info]:  INFO [06-07|12:31:19.358] Commit new mining work                   number=203 sealhash=41fb8d…74fc6d uncles=2 txs=2 gas=131630  fees=1.3163e-13   elapsed=615.499µs
+[2019-06-07 12:31:19:360] [info]:  INFO [06-07|12:31:19.358] 🔨 mined potential block                  number=203 hash=8eec26…c8c16b
+[2019-06-07 12:31:19:360] [info]:  
+[2019-06-07 12:31:19:361] [info]:  geth: INFO [06-07|12:31:19.359] Commit new mining work                   number=204 sealhash=cd50cf…be4d34 uncles=2 txs=0 gas=0       fees=0            elapsed=416.824µs
+[2019-06-07 12:31:19:361] [info]:  INFO [06-07|12:31:19.359] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:361] [info]:  
+[2019-06-07 12:31:19:370] [info]:  geth: INFO [06-07|12:31:19.369] Submitted contract creation              fullhash=0x63abe3fa73301d396fca83e427b3a4142ff94d993a9eb93d3f8a66f9694a0ba3 contract=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:371] [info]:  
+[2019-06-07 12:31:19:371] [info]:  geth: INFO [06-07|12:31:19.369] Commit new mining work                   number=204 sealhash=cd50cf…be4d34 uncles=2 txs=0 gas=0       fees=0            elapsed=111.257µs
+[2019-06-07 12:31:19:371] [info]:  INFO [06-07|12:31:19.369] Commit new mining work                   number=204 sealhash=c6ba38…ce0750 uncles=2 txs=1 gas=2116587 fees=2.116587e-12 elapsed=541.204µs
+[2019-06-07 12:31:19:371] [info]:  
+[2019-06-07 12:31:19:371] [info]:  geth: INFO [06-07|12:31:19.370] Successfully sealed new block            number=204 sealhash=c6ba38…ce0750 hash=c5acaf…e92e9a elapsed=532.047µs
+[2019-06-07 12:31:19:372] [info]:  
+[2019-06-07 12:31:19:372] [info]:  geth: INFO [06-07|12:31:19.370] 🔗 block reached canonical chain          number=197 hash=4dd18a…143282
+[2019-06-07 12:31:19:372] [info]:  INFO [06-07|12:31:19.370] 🔨 mined potential block                  number=204 hash=c5acaf…e92e9a
+[2019-06-07 12:31:19:372] [info]:  
+[2019-06-07 12:31:19:373] [info]:  deploying [36m[1mSNT[22m[39m [32mwith[39m 2149641 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 2149641[32m Wei[39m (txHash: [36m[1m0x63abe3fa73301d396fca83e427b3a4142ff94d993a9eb93d3f8a66f9694a0ba3[22m[39m)
+[2019-06-07 12:31:19:373] [info]:  geth: INFO [06-07|12:31:19.370] Commit new mining work                   number=205 sealhash=51163e…76ea40 uncles=2 txs=0 gas=0       fees=0            elapsed=646.756µs
+[2019-06-07 12:31:19:374] [info]:  INFO [06-07|12:31:19.371] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:374] [info]:  
+[2019-06-07 12:31:19:378] [info]:  [36m[1mSNT[22m[39m [32mdeployed at[39m [36m[1m0x5751123dB0d817a596D040d0fCB92a1A997e9952[22m[39m [32musing[39m 2116587 [32mgas[39m (txHash: [36m[1m0x63abe3fa73301d396fca83e427b3a4142ff94d993a9eb93d3f8a66f9694a0ba3[22m[39m)
+[2019-06-07 12:31:19:396] [info]:  geth: INFO [06-07|12:31:19.396] Submitted contract creation              fullhash=0x97c408e8caf76ac0b33663758375506b9e0f5285ebd2419e551fe6b778bcd4a1 contract=0x2c6c8Ff5Aea1CEa2c8ED67154A80751CCD483d1c
+[2019-06-07 12:31:19:396] [info]:  
+[2019-06-07 12:31:19:397] [info]:  deploying [36m[1mLicense[22m[39m [32mwith[39m 1098258 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 1098258[32m Wei[39m (txHash: [36m[1m0x97c408e8caf76ac0b33663758375506b9e0f5285ebd2419e551fe6b778bcd4a1[22m[39m)
+[2019-06-07 12:31:19:397] [info]:  geth: INFO [06-07|12:31:19.396] Commit new mining work                   number=205 sealhash=51163e…76ea40 uncles=2 txs=0 gas=0       fees=0            elapsed=150.635µs
+[2019-06-07 12:31:19:398] [info]:  INFO [06-07|12:31:19.396] Commit new mining work                   number=205 sealhash=d494dc…380c03 uncles=2 txs=1 gas=1047004 fees=1.047004e-12 elapsed=683.663µs
+[2019-06-07 12:31:19:398] [info]:  
+[2019-06-07 12:31:19:398] [info]:  geth: INFO [06-07|12:31:19.397] Submitted contract creation              fullhash=0xff8c31936dd63de1c2bbc4dc9ca2472d07f8fe8182d78beebd6ee86e2aec3e3c contract=0xd9AF4949dD98839Fa61c5Ab0E4D79E0De9ee570D
+[2019-06-07 12:31:19:398] [info]:  
+[2019-06-07 12:31:19:398] [info]:  deploying [36m[1mArbitration[22m[39m [32mwith[39m 1977138 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 1977138[32m Wei[39m (txHash: [36m[1m0xff8c31936dd63de1c2bbc4dc9ca2472d07f8fe8182d78beebd6ee86e2aec3e3c[22m[39m)
+[2019-06-07 12:31:19:399] [info]:  geth: INFO [06-07|12:31:19.397] Commit new mining work                   number=205 sealhash=51163e…76ea40 uncles=2 txs=0 gas=0       fees=0            elapsed=76.946µs
+[2019-06-07 12:31:19:399] [info]:  INFO [06-07|12:31:19.397] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:399] [info]:  INFO [06-07|12:31:19.397] Successfully sealed new block            number=205 sealhash=d494dc…380c03 hash=362177…3add32 elapsed=662.808µs
+[2019-06-07 12:31:19:400] [info]:  INFO [06-07|12:31:19.397] 🔗 block reached canonical chain          number=198 hash=72f5e8…e0baae
+[2019-06-07 12:31:19:400] [info]:  INFO [06-07|12:31:19.397] 🔨 mined potential block                  number=205 hash=362177…3add32
+[2019-06-07 12:31:19:400] [info]:  INFO [06-07|12:31:19.397] Commit new mining work                   number=205 sealhash=01d1ce…d84d1a uncles=2 txs=2 gas=2979897 fees=2.979897e-12 elapsed=660.38µs
+[2019-06-07 12:31:19:400] [info]:  
+[2019-06-07 12:31:19:400] [info]:  geth: INFO [06-07|12:31:19.398] Successfully sealed new block            number=205 sealhash=01d1ce…d84d1a hash=7f8e03…74def1 elapsed=759.105µs
+[2019-06-07 12:31:19:400] [info]:  INFO [06-07|12:31:19.398] 🔨 mined potential block                  number=205 hash=7f8e03…74def1
+[2019-06-07 12:31:19:401] [info]:  INFO [06-07|12:31:19.398] Commit new mining work                   number=206 sealhash=c96527…2c393d uncles=1 txs=0 gas=0       fees=0            elapsed=548.216µs
+[2019-06-07 12:31:19:401] [info]:  INFO [06-07|12:31:19.398] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:401] [info]:  
+[2019-06-07 12:31:19:405] [info]:  geth: INFO [06-07|12:31:19.399] Commit new mining work                   number=206 sealhash=e1b696…8ad588 uncles=1 txs=1 gas=1932893 fees=1.932893e-12 elapsed=1.015ms
+[2019-06-07 12:31:19:405] [info]:  INFO [06-07|12:31:19.399] Commit new mining work                   number=206 sealhash=e1b696…8ad588 uncles=2 txs=1 gas=1932893 fees=1.932893e-12 elapsed=223.655µs
+[2019-06-07 12:31:19:406] [info]:  INFO [06-07|12:31:19.399] Successfully sealed new block            number=206 sealhash=e1b696…8ad588 hash=44b3f0…94575b elapsed=796.241µs
+[2019-06-07 12:31:19:406] [info]:  INFO [06-07|12:31:19.400] 🔗 block reached canonical chain          number=199 hash=a2c0cb…40c455
+[2019-06-07 12:31:19:406] [info]:  INFO [06-07|12:31:19.400] 😱 block lost                             number=199 hash=2963f9…898e9b
+[2019-06-07 12:31:19:406] [info]:  INFO [06-07|12:31:19.400] 🔨 mined potential block                  number=206 hash=44b3f0…94575b
+[2019-06-07 12:31:19:406] [info]:  INFO [06-07|12:31:19.400] Commit new mining work                   number=207 sealhash=9cd5a5…15f554 uncles=1 txs=0 gas=0       fees=0            elapsed=595.917µs
+[2019-06-07 12:31:19:406] [info]:  INFO [06-07|12:31:19.400] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:406] [info]:  
+[2019-06-07 12:31:19:408] [info]:  [36m[1mLicense[22m[39m [32mdeployed at[39m [36m[1m0x2c6c8Ff5Aea1CEa2c8ED67154A80751CCD483d1c[22m[39m [32musing[39m 1047004 [32mgas[39m (txHash: [36m[1m0x97c408e8caf76ac0b33663758375506b9e0f5285ebd2419e551fe6b778bcd4a1[22m[39m)
+[2019-06-07 12:31:19:414] [info]:  [36m[1mArbitration[22m[39m [32mdeployed at[39m [36m[1m0xd9AF4949dD98839Fa61c5Ab0E4D79E0De9ee570D[22m[39m [32musing[39m 1932893 [32mgas[39m (txHash: [36m[1m0xff8c31936dd63de1c2bbc4dc9ca2472d07f8fe8182d78beebd6ee86e2aec3e3c[22m[39m)
+[2019-06-07 12:31:19:440] [info]:  geth: INFO [06-07|12:31:19.439] Submitted contract creation              fullhash=0xeec850dbdf78861f78b6f78981f0a4ffcc4af8d5bd14dfab7bdc13fd40c8a145 contract=0xCD1EF4215E5826Fd91A3119e12C89FE2078c253e
+[2019-06-07 12:31:19:440] [info]:  
+[2019-06-07 12:31:19:440] [info]:  geth: INFO [06-07|12:31:19.439] Commit new mining work                   number=207 sealhash=9cd5a5…15f554 uncles=1 txs=0 gas=0       fees=0            elapsed=191.607µs
+[2019-06-07 12:31:19:440] [info]:  
+[2019-06-07 12:31:19:440] [info]:  deploying [36m[1mMetadataStore[22m[39m [32mwith[39m 4087035 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 4087035[32m Wei[39m (txHash: [36m[1m0xeec850dbdf78861f78b6f78981f0a4ffcc4af8d5bd14dfab7bdc13fd40c8a145[22m[39m)
+[2019-06-07 12:31:19:441] [info]:  geth: INFO [06-07|12:31:19.440] Commit new mining work                   number=207 sealhash=b0692f…0ffe68 uncles=1 txs=1 gas=3992365 fees=3.992365e-12 elapsed=836.051µs
+[2019-06-07 12:31:19:441] [info]:  
+[2019-06-07 12:31:19:441] [info]:  geth: INFO [06-07|12:31:19.440] Successfully sealed new block            number=207 sealhash=b0692f…0ffe68 hash=cf61ae…827bf3 elapsed=628.376µs
+[2019-06-07 12:31:19:442] [info]:  
+[2019-06-07 12:31:19:442] [info]:  geth: INFO [06-07|12:31:19.440] 🔗 block reached canonical chain          number=200 hash=022aae…8ef4a6
+[2019-06-07 12:31:19:442] [info]:  INFO [06-07|12:31:19.441] 😱 block lost                             number=200 hash=ebbb16…3e76cb
+[2019-06-07 12:31:19:442] [info]:  
+[2019-06-07 12:31:19:442] [info]:  geth: INFO [06-07|12:31:19.441] 🔨 mined potential block                  number=207 hash=cf61ae…827bf3
+[2019-06-07 12:31:19:442] [info]:  
+[2019-06-07 12:31:19:443] [info]:  geth: INFO [06-07|12:31:19.441] Commit new mining work                   number=208 sealhash=b61592…f67491 uncles=1 txs=0 gas=0       fees=0            elapsed=595.521µs
+[2019-06-07 12:31:19:443] [info]:  INFO [06-07|12:31:19.441] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:444] [info]:  
+[2019-06-07 12:31:19:446] [info]:  [36m[1mMetadataStore[22m[39m [32mdeployed at[39m [36m[1m0xCD1EF4215E5826Fd91A3119e12C89FE2078c253e[22m[39m [32musing[39m 3992365 [32mgas[39m (txHash: [36m[1m0xeec850dbdf78861f78b6f78981f0a4ffcc4af8d5bd14dfab7bdc13fd40c8a145[22m[39m)
+[2019-06-07 12:31:19:472] [info]:  geth: INFO [06-07|12:31:19.472] Submitted contract creation              fullhash=0x0ddb47a96d1176b95e14843767a7c180c28c304e3e9ee5d218227b1cdf2e4c16 contract=0x13c4bBACFb91844a31d0FfFF7C07F652Dc0B2F2a
+[2019-06-07 12:31:19:472] [info]:  
+[2019-06-07 12:31:19:473] [info]:  geth: INFO [06-07|12:31:19.472] Commit new mining work                   number=208 sealhash=b61592…f67491 uncles=1 txs=0 gas=0       fees=0            elapsed=154.744µs
+[2019-06-07 12:31:19:473] [info]:  
+[2019-06-07 12:31:19:474] [info]:  deploying [36m[1mEscrow[22m[39m [32mwith[39m 5296731 [32mgas at the price of[39m 1 [32mWei, estimated cost:[39m 5296731[32m Wei[39m (txHash: [36m[1m0x0ddb47a96d1176b95e14843767a7c180c28c304e3e9ee5d218227b1cdf2e4c16[22m[39m)
+[2019-06-07 12:31:19:475] [info]:  geth: INFO [06-07|12:31:19.473] Commit new mining work                   number=208 sealhash=1a0d29…ed8bab uncles=1 txs=1 gas=5171202 fees=5.171202e-12 elapsed=1.004ms
+[2019-06-07 12:31:19:475] [info]:  
+[2019-06-07 12:31:19:475] [info]:  geth: INFO [06-07|12:31:19.474] Successfully sealed new block            number=208 sealhash=1a0d29…ed8bab hash=33aec9…899d9f elapsed=1.007ms
+[2019-06-07 12:31:19:475] [info]:  
+[2019-06-07 12:31:19:475] [info]:  geth: INFO [06-07|12:31:19.474] 🔗 block reached canonical chain          number=201 hash=16e29b…dae026
+[2019-06-07 12:31:19:475] [info]:  INFO [06-07|12:31:19.474] 🔨 mined potential block                  number=208 hash=33aec9…899d9f
+[2019-06-07 12:31:19:476] [info]:  
+[2019-06-07 12:31:19:476] [info]:  geth: INFO [06-07|12:31:19.474] Commit new mining work                   number=209 sealhash=17b06c…8ad067 uncles=1 txs=0 gas=0       fees=0            elapsed=669.425µs
+[2019-06-07 12:31:19:476] [info]:  INFO [06-07|12:31:19.475] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:476] [info]:  
+[2019-06-07 12:31:19:481] [info]:  [36m[1mEscrow[22m[39m [32mdeployed at[39m [36m[1m0x13c4bBACFb91844a31d0FfFF7C07F652Dc0B2F2a[22m[39m [32musing[39m 5171202 [32mgas[39m (txHash: [36m[1m0x0ddb47a96d1176b95e14843767a7c180c28c304e3e9ee5d218227b1cdf2e4c16[22m[39m)
+[2019-06-07 12:31:19:489] [info]:  executing onDeploy commands
+[2019-06-07 12:31:19:489] [info]:  ==== executing: Arbitration.methods.setEscrowAddress('0x13c4bBACFb91844a31d0FfFF7C07F652Dc0B2F2a').send()
+[2019-06-07 12:31:19:490] [info]:  ==== executing: MetadataStore.methods.setEscrowAddress('0x13c4bBACFb91844a31d0FfFF7C07F652Dc0B2F2a').send()
+[2019-06-07 12:31:19:493] [info]:  geth: INFO [06-07|12:31:19.493] Submitted transaction                    fullhash=0xd4682c0e76b65536c2a50786bd9e20815f4a97b50614210eb5b5350b227ec419 recipient=0xd9AF4949dD98839Fa61c5Ab0E4D79E0De9ee570D
+[2019-06-07 12:31:19:494] [info]:  
+[2019-06-07 12:31:19:494] [info]:  geth: INFO [06-07|12:31:19.493] Commit new mining work                   number=209 sealhash=17b06c…8ad067 uncles=1 txs=0 gas=0       fees=0            elapsed=125.23µs
+[2019-06-07 12:31:19:495] [info]:  INFO [06-07|12:31:19.493] Submitted transaction                    fullhash=0x7b58a1370e6605050946df838f5a803a3419dad33dd06da109ed663389a2354a recipient=0xCD1EF4215E5826Fd91A3119e12C89FE2078c253e
+[2019-06-07 12:31:19:495] [info]:  
+[2019-06-07 12:31:19:495] [info]:  geth: INFO [06-07|12:31:19.494] Commit new mining work                   number=209 sealhash=bc3c14…5a5e90 uncles=1 txs=2 gas=86973   fees=8.6973e-14   elapsed=849.195µs
+[2019-06-07 12:31:19:496] [info]:  
+[2019-06-07 12:31:19:497] [info]:  geth: INFO [06-07|12:31:19.494] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:497] [info]:  INFO [06-07|12:31:19.494] Commit new mining work                   number=209 sealhash=17b06c…8ad067 uncles=1 txs=0 gas=0       fees=0            elapsed=155.544µs
+[2019-06-07 12:31:19:498] [info]:  
+[2019-06-07 12:31:19:498] [info]:  geth: INFO [06-07|12:31:19.495] Successfully sealed new block            number=209 sealhash=bc3c14…5a5e90 hash=498846…c770cf elapsed=864.676µs
+[2019-06-07 12:31:19:498] [info]:  
+[2019-06-07 12:31:19:498] [info]:  geth: INFO [06-07|12:31:19.495] 🔗 block reached canonical chain          number=202 hash=a4b872…3d1cbb
+[2019-06-07 12:31:19:499] [info]:  INFO [06-07|12:31:19.495] 🔨 mined potential block                  number=209 hash=498846…c770cf
+[2019-06-07 12:31:19:499] [info]:  INFO [06-07|12:31:19.495] Commit new mining work                   number=209 sealhash=bc3c14…5a5e90 uncles=1 txs=2 gas=86973   fees=8.6973e-14   elapsed=772.558µs
+[2019-06-07 12:31:19:499] [info]:  
+[2019-06-07 12:31:19:499] [info]:  geth: INFO [06-07|12:31:19.496] Commit new mining work                   number=210 sealhash=cd56c6…9794b3 uncles=1 txs=0 gas=0       fees=0            elapsed=662.035µs
+[2019-06-07 12:31:19:499] [info]:  INFO [06-07|12:31:19.496] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:499] [info]:  
+[2019-06-07 12:31:19:503] [info]:  finished deploying contracts
+[2019-06-07 12:31:19:516] [info]:  Seeding data...
+[2019-06-07 12:31:19:517] [info]:  Send ETH...
+[2019-06-07 12:31:19:522] [info]:  geth: INFO [06-07|12:31:19.520] Submitted transaction                    fullhash=0x3239c4ad1be5b81c1c1d0668424fe30d2ca4d7d760366873cee182e5081c9e88 recipient=0x002bF1F1A26ef715d395aDDa31965942Ff16DeB2
+[2019-06-07 12:31:19:523] [info]:  INFO [06-07|12:31:19.520] Commit new mining work                   number=210 sealhash=cd56c6…9794b3 uncles=1 txs=0 gas=0       fees=0            elapsed=103.108µs
+[2019-06-07 12:31:19:523] [info]:  INFO [06-07|12:31:19.520] Commit new mining work                   number=210 sealhash=1be300…7fcd1b uncles=1 txs=1 gas=21000   fees=2.1e-14      elapsed=300.372µs
+[2019-06-07 12:31:19:523] [info]:  
+[2019-06-07 12:31:19:523] [info]:  geth: INFO [06-07|12:31:19.521] Successfully sealed new block            number=210 sealhash=1be300…7fcd1b hash=81deca…b0978f elapsed=598.978µs
+[2019-06-07 12:31:19:523] [info]:  INFO [06-07|12:31:19.521] 🔗 block reached canonical chain          number=203 hash=8eec26…c8c16b
+[2019-06-07 12:31:19:523] [info]:  INFO [06-07|12:31:19.521] 🔨 mined potential block                  number=210 hash=81deca…b0978f
+[2019-06-07 12:31:19:524] [info]:  INFO [06-07|12:31:19.521] Submitted transaction                    fullhash=0xd14c025b9399374d61612562f7370c970b82b6eec1fed9b0386619c37699a9dc recipient=0x9267Ad0a55471F37D77498BD1999F566Ad9BeF8d
+[2019-06-07 12:31:19:524] [info]:  INFO [06-07|12:31:19.522] Commit new mining work                   number=211 sealhash=2160b2…32cd7c uncles=1 txs=0 gas=0       fees=0            elapsed=600.752µs
+[2019-06-07 12:31:19:524] [info]:  INFO [06-07|12:31:19.522] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:524] [info]:  INFO [06-07|12:31:19.522] Commit new mining work                   number=211 sealhash=0a7713…85173c uncles=1 txs=1 gas=21000   fees=2.1e-14      elapsed=824.851µs
+[2019-06-07 12:31:19:524] [info]:  
+[2019-06-07 12:31:19:525] [info]:  geth: INFO [06-07|12:31:19.522] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:525] [info]:  INFO [06-07|12:31:19.522] Commit new mining work                   number=211 sealhash=2160b2…32cd7c uncles=1 txs=0 gas=0       fees=0            elapsed=295.921µs
+[2019-06-07 12:31:19:525] [info]:  INFO [06-07|12:31:19.522] Submitted transaction                    fullhash=0x114fe48eb0a73831b40d40440917f3c78df92566160be38a128ded45b983f2cc recipient=0xEF7e02309Aa2ed0f35EDE5b1eDaCEdFb48F407Ef
+[2019-06-07 12:31:19:526] [info]:  INFO [06-07|12:31:19.522] Successfully sealed new block            number=211 sealhash=0a7713…85173c hash=89d820…05e447 elapsed=722.643µs
+[2019-06-07 12:31:19:526] [info]:  INFO [06-07|12:31:19.523] 🔗 block reached canonical chain          number=204 hash=c5acaf…e92e9a
+[2019-06-07 12:31:19:526] [info]:  INFO [06-07|12:31:19.523] 🔨 mined potential block                  number=211 hash=89d820…05e447
+[2019-06-07 12:31:19:526] [info]:  INFO [06-07|12:31:19.523] Commit new mining work                   number=211 sealhash=64f01c…b529f4 uncles=1 txs=2 gas=42000   fees=4.2e-14      elapsed=798.79µs
+[2019-06-07 12:31:19:526] [info]:  INFO [06-07|12:31:19.523] Submitted transaction                    fullhash=0xbba7cb2ab207c94b05c6da5bf3fe4797c7bfca5b3a5bed960c13a0f8c5725d25 recipient=0xd73F2fE7ADebF899716B74619D6528eB1d673FeE
+[2019-06-07 12:31:19:526] [info]:  INFO [06-07|12:31:19.523] Commit new mining work                   number=212 sealhash=72af83…7e3fef uncles=0 txs=0 gas=0       fees=0            elapsed=448.1µs
+[2019-06-07 12:31:19:527] [info]:  INFO [06-07|12:31:19.524] Successfully sealed new block            number=211 sealhash=64f01c…b529f4 hash=1551fd…eb1d54 elapsed=883.216µs
+[2019-06-07 12:31:19:527] [info]:  INFO [06-07|12:31:19.524] 🔨 mined potential block                  number=211 hash=1551fd…eb1d54
+[2019-06-07 12:31:19:527] [info]:  INFO [06-07|12:31:19.524] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:527] [info]:  INFO [06-07|12:31:19.524] Commit new mining work                   number=212 sealhash=67f5e5…a453b2 uncles=0 txs=2 gas=42000   fees=4.2e-14      elapsed=867.058µs
+[2019-06-07 12:31:19:527] [info]:  
+[2019-06-07 12:31:19:530] [info]:  geth: INFO [06-07|12:31:19.524] Submitted transaction                    fullhash=0x73d82b4b136371271fb8547c19cab544980de5ad84c150a0c765f440420d50fe recipient=0xdA31d2C88Fc733571c038D84b166826d2e3824F7
+[2019-06-07 12:31:19:530] [info]:  INFO [06-07|12:31:19.524] Commit new mining work                   number=212 sealhash=94cf3f…0cc8d2 uncles=0 txs=0 gas=0       fees=0            elapsed=566.322µs
+[2019-06-07 12:31:19:530] [info]:  INFO [06-07|12:31:19.524] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:531] [info]:  INFO [06-07|12:31:19.525] Successfully sealed new block            number=212 sealhash=67f5e5…a453b2 hash=82ff6e…0caedb elapsed=1.022ms
+[2019-06-07 12:31:19:531] [info]:  INFO [06-07|12:31:19.525] 🔗 block reached canonical chain          number=205 hash=362177…3add32
+[2019-06-07 12:31:19:531] [info]:  INFO [06-07|12:31:19.525] 😱 block lost                             number=205 hash=7f8e03…74def1
+[2019-06-07 12:31:19:531] [info]:  INFO [06-07|12:31:19.525] 🔨 mined potential block                  number=212 hash=82ff6e…0caedb
+[2019-06-07 12:31:19:532] [info]:  INFO [06-07|12:31:19.525] Submitted transaction                    fullhash=0xf3cc338ae69845f700e142c6cf1fd936f0ab8c7e8b5ac027ccd7c9f973e617a9 recipient=0xC0fa637BC5446a202dACC2CCE4257B62dAf68360
+[2019-06-07 12:31:19:532] [info]:  INFO [06-07|12:31:19.525] Commit new mining work                   number=212 sealhash=f03637…853cf0 uncles=0 txs=3 gas=63000   fees=6.3e-14      elapsed=1.440ms
+[2019-06-07 12:31:19:532] [info]:  INFO [06-07|12:31:19.526] Submitted transaction                    fullhash=0x26f79c69b22581ee3ea7cd69d53bc12959af227cb134e083d3161ed522d7ee29 recipient=0xcE5DbdecC9F376896A8B63CE3599F78e34692476
+[2019-06-07 12:31:19:532] [info]:  INFO [06-07|12:31:19.526] Commit new mining work                   number=213 sealhash=ab836d…a4153a uncles=0 txs=0 gas=0       fees=0            elapsed=540.971µs
+[2019-06-07 12:31:19:532] [info]:  INFO [06-07|12:31:19.526] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:533] [info]:  INFO [06-07|12:31:19.526] Successfully sealed new block            number=212 sealhash=f03637…853cf0 hash=5e46be…9b1f4c elapsed=890.709µs
+[2019-06-07 12:31:19:533] [info]:  INFO [06-07|12:31:19.526] 🔨 mined potential block                  number=212 hash=5e46be…9b1f4c
+[2019-06-07 12:31:19:533] [info]:  INFO [06-07|12:31:19.526] Submitted transaction                    fullhash=0xfc21b89cf2b6575aa346d1981a29905537da9484e7759e3129775516f79b46ce recipient=0x1d648db4824a16a66187e00593A6294d4FeE571c
+[2019-06-07 12:31:19:533] [info]:  
+[2019-06-07 12:31:19:533] [info]:  geth: INFO [06-07|12:31:19.527] Submitted transaction                    fullhash=0x815cfcb31686347d794aca108c8e8abfdaf504cee4b89f60baaa52919a995841 recipient=0x0D9E01dB73bF91f31ce970b0BC68d8fbDf017fE3
+[2019-06-07 12:31:19:533] [info]:  INFO [06-07|12:31:19.527] Commit new mining work                   number=213 sealhash=72db88…dff526 uncles=1 txs=0 gas=0       fees=0            elapsed=618.155µs
+[2019-06-07 12:31:19:533] [info]:  INFO [06-07|12:31:19.527] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:534] [info]:  INFO [06-07|12:31:19.528] Commit new mining work                   number=213 sealhash=1a4799…cdb1b4 uncles=1 txs=3 gas=63000   fees=6.3e-14      elapsed=1.146ms
+[2019-06-07 12:31:19:534] [info]:  INFO [06-07|12:31:19.528] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:534] [info]:  INFO [06-07|12:31:19.528] Commit new mining work                   number=213 sealhash=72db88…dff526 uncles=1 txs=0 gas=0       fees=0            elapsed=580.244µs
+[2019-06-07 12:31:19:534] [info]:  INFO [06-07|12:31:19.529] Commit new mining work                   number=213 sealhash=72db88…dff526 uncles=1 txs=0 gas=0       fees=0            elapsed=147.057µs
+[2019-06-07 12:31:19:534] [info]:  
+[2019-06-07 12:31:19:535] [info]:  geth: INFO [06-07|12:31:19.530] Commit new mining work                   number=213 sealhash=1a4799…cdb1b4 uncles=1 txs=3 gas=63000   fees=6.3e-14      elapsed=1.127ms
+[2019-06-07 12:31:19:535] [info]:  INFO [06-07|12:31:19.530] Commit new mining work                   number=213 sealhash=72db88…dff526 uncles=1 txs=0 gas=0       fees=0            elapsed=192.488µs
+[2019-06-07 12:31:19:535] [info]:  INFO [06-07|12:31:19.530] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:536] [info]:  INFO [06-07|12:31:19.530] Successfully sealed new block            number=213 sealhash=1a4799…cdb1b4 hash=6d3edd…de73d7 elapsed=1.210ms
+[2019-06-07 12:31:19:536] [info]:  INFO [06-07|12:31:19.531] 🔗 block reached canonical chain          number=206 hash=44b3f0…94575b
+[2019-06-07 12:31:19:536] [info]:  INFO [06-07|12:31:19.531] 🔨 mined potential block                  number=213 hash=6d3edd…de73d7
+[2019-06-07 12:31:19:536] [info]:  INFO [06-07|12:31:19.531] Commit new mining work                   number=213 sealhash=1a4799…cdb1b4 uncles=1 txs=3 gas=63000   fees=6.3e-14      elapsed=815.906µs
+[2019-06-07 12:31:19:536] [info]:  INFO [06-07|12:31:19.532] Commit new mining work                   number=214 sealhash=b29e9d…90ee10 uncles=1 txs=0 gas=0       fees=0            elapsed=775.665µs
+[2019-06-07 12:31:19:536] [info]:  INFO [06-07|12:31:19.532] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:536] [info]:  INFO [06-07|12:31:19.532] Commit new mining work                   number=214 sealhash=b29e9d…90ee10 uncles=1 txs=0 gas=0       fees=0            elapsed=148.557µs
+[2019-06-07 12:31:19:536] [info]:  
+[2019-06-07 12:31:19:536] [info]:  geth: INFO [06-07|12:31:19.532] Commit new mining work                   number=214 sealhash=b29e9d…90ee10 uncles=1 txs=0 gas=0       fees=0            elapsed=173.008µs
+[2019-06-07 12:31:19:537] [info]:  INFO [06-07|12:31:19.532] Commit new mining work                   number=214 sealhash=b29e9d…90ee10 uncles=1 txs=0 gas=0       fees=0            elapsed=135.556µs
+[2019-06-07 12:31:19:537] [info]:  INFO [06-07|12:31:19.533] Commit new mining work                   number=214 sealhash=b29e9d…90ee10 uncles=1 txs=0 gas=0       fees=0            elapsed=128.927µs
+[2019-06-07 12:31:19:537] [info]:  
+[2019-06-07 12:31:19:537] [info]:  Contract log for unknown contract: {"type":"contract-log","address":"0x002bf1f1a26ef715d395adda31965942ff16deb2","transactionHash":"0x3239c4ad1be5b81c1c1d0668424fe30d2ca4d7d760366873cee182e5081c9e88","blockNumber":"0xd2","gasUsed":"0x5208","status":"0x1"}
+[2019-06-07 12:31:19:538] [info]:  Contract log for unknown contract: {"type":"contract-log","address":"0x9267ad0a55471f37d77498bd1999f566ad9bef8d","transactionHash":"0xd14c025b9399374d61612562f7370c970b82b6eec1fed9b0386619c37699a9dc","blockNumber":"0xd3","gasUsed":"0x5208","status":"0x1"}
+[2019-06-07 12:31:19:541] [info]:  Contract log for unknown contract: {"type":"contract-log","address":"0xef7e02309aa2ed0f35ede5b1edacedfb48f407ef","transactionHash":"0x114fe48eb0a73831b40d40440917f3c78df92566160be38a128ded45b983f2cc","blockNumber":"0xd3","gasUsed":"0x5208","status":"0x1"}
+[2019-06-07 12:31:19:541] [info]:  Contract log for unknown contract: {"type":"contract-log","address":"0xd73f2fe7adebf899716b74619d6528eb1d673fee","transactionHash":"0xbba7cb2ab207c94b05c6da5bf3fe4797c7bfca5b3a5bed960c13a0f8c5725d25","blockNumber":"0xd4","gasUsed":"0x5208","status":"0x1"}
+[2019-06-07 12:31:19:544] [info]:  Contract log for unknown contract: {"type":"contract-log","address":"0xda31d2c88fc733571c038d84b166826d2e3824f7","transactionHash":"0x73d82b4b136371271fb8547c19cab544980de5ad84c150a0c765f440420d50fe","blockNumber":"0xd4","gasUsed":"0x5208","status":"0x1"}
+[2019-06-07 12:31:19:546] [info]:  Contract log for unknown contract: {"type":"contract-log","address":"0xc0fa637bc5446a202dacc2cce4257b62daf68360","transactionHash":"0xf3cc338ae69845f700e142c6cf1fd936f0ab8c7e8b5ac027ccd7c9f973e617a9","blockNumber":"0xd4","gasUsed":"0x5208","status":"0x1"}
+[2019-06-07 12:31:19:546] [info]:  Contract log for unknown contract: {"type":"contract-log","address":"0xce5dbdecc9f376896a8b63ce3599f78e34692476","transactionHash":"0x26f79c69b22581ee3ea7cd69d53bc12959af227cb134e083d3161ed522d7ee29","blockNumber":"0xd5","gasUsed":"0x5208","status":"0x1"}
+[2019-06-07 12:31:19:549] [info]:  Contract log for unknown contract: {"type":"contract-log","address":"0x1d648db4824a16a66187e00593a6294d4fee571c","transactionHash":"0xfc21b89cf2b6575aa346d1981a29905537da9484e7759e3129775516f79b46ce","blockNumber":"0xd5","gasUsed":"0x5208","status":"0x1"}
+[2019-06-07 12:31:19:549] [info]:  Contract log for unknown contract: {"type":"contract-log","address":"0x0d9e01db73bf91f31ce970b0bc68d8fbdf017fe3","transactionHash":"0x815cfcb31686347d794aca108c8e8abfdaf504cee4b89f60baaa52919a995841","blockNumber":"0xd5","gasUsed":"0x5208","status":"0x1"}
+[2019-06-07 12:31:19:553] [info]:  Generate SNT...
+[2019-06-07 12:31:19:578] [info]:  geth: INFO [06-07|12:31:19.572] Submitted transaction                    fullhash=0x0ebcb1604c5c2ed54e076266ef742b7a9af017fc66738d130b3828a816ea3a2a recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:578] [info]:  INFO [06-07|12:31:19.572] Commit new mining work                   number=214 sealhash=b29e9d…90ee10 uncles=1 txs=0 gas=0       fees=0            elapsed=178.039µs
+[2019-06-07 12:31:19:578] [info]:  
+[2019-06-07 12:31:19:578] [info]:  geth: INFO [06-07|12:31:19.573] Submitted transaction                    fullhash=0x4f00c31850284cf8e03bedaf610877e28109ca259c1484c803d0f1818980f7c5 recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:579] [info]:  INFO [06-07|12:31:19.573] Commit new mining work                   number=214 sealhash=b1cfed…7791a8 uncles=1 txs=1 gas=109678  fees=1.09678e-13  elapsed=1.103ms
+[2019-06-07 12:31:19:579] [info]:  INFO [06-07|12:31:19.574] Commit new mining work                   number=214 sealhash=b29e9d…90ee10 uncles=1 txs=0 gas=0       fees=0            elapsed=206.757µs
+[2019-06-07 12:31:19:579] [info]:  INFO [06-07|12:31:19.574] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:579] [info]:  INFO [06-07|12:31:19.575] Successfully sealed new block            number=214 sealhash=b1cfed…7791a8 hash=b7e50e…390e28 elapsed=1.448ms
+[2019-06-07 12:31:19:579] [info]:  INFO [06-07|12:31:19.575] 🔗 block reached canonical chain          number=207 hash=cf61ae…827bf3
+[2019-06-07 12:31:19:579] [info]:  INFO [06-07|12:31:19.575] 🔨 mined potential block                  number=214 hash=b7e50e…390e28
+[2019-06-07 12:31:19:579] [info]:  
+[2019-06-07 12:31:19:579] [info]:  geth: INFO [06-07|12:31:19.575] Commit new mining work                   number=214 sealhash=163c95…294f3d uncles=1 txs=2 gas=186083  fees=1.86083e-13  elapsed=1.374ms
+[2019-06-07 12:31:19:580] [info]:  
+[2019-06-07 12:31:19:580] [info]:  geth: INFO [06-07|12:31:19.576] Commit new mining work                   number=215 sealhash=d681bb…5327c5 uncles=1 txs=0 gas=0       fees=0            elapsed=592.334µs
+[2019-06-07 12:31:19:580] [info]:  INFO [06-07|12:31:19.576] Successfully sealed new block            number=214 sealhash=163c95…294f3d hash=7883a3…0ae594 elapsed=890.193µs
+[2019-06-07 12:31:19:580] [info]:  INFO [06-07|12:31:19.576] 🔨 mined potential block                  number=214 hash=7883a3…0ae594
+[2019-06-07 12:31:19:580] [info]:  INFO [06-07|12:31:19.576] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:580] [info]:  INFO [06-07|12:31:19.576] Commit new mining work                   number=215 sealhash=3084a7…c7e80f uncles=1 txs=1 gas=96912   fees=9.6912e-14   elapsed=1.252ms
+[2019-06-07 12:31:19:580] [info]:  
+[2019-06-07 12:31:19:582] [info]:  geth: INFO [06-07|12:31:19.577] Commit new mining work                   number=215 sealhash=3084a7…c7e80f uncles=2 txs=1 gas=96912   fees=9.6912e-14   elapsed=170.81µs
+[2019-06-07 12:31:19:583] [info]:  INFO [06-07|12:31:19.577] Successfully sealed new block            number=215 sealhash=3084a7…c7e80f hash=ca3906…c67409 elapsed=770.362µs
+[2019-06-07 12:31:19:583] [info]:  INFO [06-07|12:31:19.577] 🔗 block reached canonical chain          number=208 hash=33aec9…899d9f
+[2019-06-07 12:31:19:583] [info]:  INFO [06-07|12:31:19.577] 🔨 mined potential block                  number=215 hash=ca3906…c67409
+[2019-06-07 12:31:19:583] [info]:  INFO [06-07|12:31:19.578] Submitted transaction                    fullhash=0x00eebdcbf627edcee6dcc57a44cfc4faeed216ff3dd319a7531b39c6e639c8f0 recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:583] [info]:  INFO [06-07|12:31:19.578] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:583] [info]:  INFO [06-07|12:31:19.578] Commit new mining work                   number=216 sealhash=84611e…4617f2 uncles=2 txs=0 gas=0       fees=0            elapsed=432.008µs
+[2019-06-07 12:31:19:584] [info]:  
+[2019-06-07 12:31:19:584] [info]:  geth: INFO [06-07|12:31:19.579] Commit new mining work                   number=216 sealhash=615f59…b527a6 uncles=2 txs=1 gas=96912   fees=9.6912e-14   elapsed=1.297ms
+[2019-06-07 12:31:19:584] [info]:  INFO [06-07|12:31:19.579] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:584] [info]:  INFO [06-07|12:31:19.579] Commit new mining work                   number=216 sealhash=84611e…4617f2 uncles=2 txs=0 gas=0       fees=0            elapsed=268.277µs
+[2019-06-07 12:31:19:584] [info]:  
+[2019-06-07 12:31:19:584] [info]:  geth: INFO [06-07|12:31:19.579] Commit new mining work                   number=216 sealhash=615f59…b527a6 uncles=2 txs=1 gas=96912   fees=9.6912e-14   elapsed=779.695µs
+[2019-06-07 12:31:19:585] [info]:  
+[2019-06-07 12:31:19:585] [info]:  geth: INFO [06-07|12:31:19.580] Successfully sealed new block            number=216 sealhash=615f59…b527a6 hash=e72ad0…1beed4 elapsed=744.875µs
+[2019-06-07 12:31:19:585] [info]:  
+[2019-06-07 12:31:19:585] [info]:  geth: INFO [06-07|12:31:19.580] 🔗 block reached canonical chain          number=209 hash=498846…c770cf
+[2019-06-07 12:31:19:585] [info]:  INFO [06-07|12:31:19.580] 🔨 mined potential block                  number=216 hash=e72ad0…1beed4
+[2019-06-07 12:31:19:585] [info]:  
+[2019-06-07 12:31:19:585] [info]:  geth: INFO [06-07|12:31:19.581] Commit new mining work                   number=217 sealhash=edf665…23f9b8 uncles=2 txs=0 gas=0       fees=0            elapsed=406.258µs
+[2019-06-07 12:31:19:585] [info]:  
+[2019-06-07 12:31:19:585] [info]:  geth: INFO [06-07|12:31:19.581] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:586] [info]:  
+[2019-06-07 12:31:19:586] [info]:  geth: INFO [06-07|12:31:19.581] Submitted transaction                    fullhash=0x4b42519caed4cd85bf963000fbbf3d3fa44020c0e88a6f9b0fed65946a4e5ea3 recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:586] [info]:  INFO [06-07|12:31:19.582] Commit new mining work                   number=217 sealhash=edf665…23f9b8 uncles=2 txs=0 gas=0       fees=0            elapsed=122.005µs
+[2019-06-07 12:31:19:586] [info]:  
+[2019-06-07 12:31:19:588] [info]:  geth: INFO [06-07|12:31:19.582] Commit new mining work                   number=217 sealhash=dcb105…177cec uncles=2 txs=1 gas=96912   fees=9.6912e-14   elapsed=590.891µs
+[2019-06-07 12:31:19:588] [info]:  
+[2019-06-07 12:31:19:588] [info]:  geth: INFO [06-07|12:31:19.583] Successfully sealed new block            number=217 sealhash=dcb105…177cec hash=bcec09…af4b05 elapsed=980.453µs
+[2019-06-07 12:31:19:588] [info]:  INFO [06-07|12:31:19.583] 🔗 block reached canonical chain          number=210 hash=81deca…b0978f
+[2019-06-07 12:31:19:588] [info]:  INFO [06-07|12:31:19.583] 🔨 mined potential block                  number=217 hash=bcec09…af4b05
+[2019-06-07 12:31:19:588] [info]:  
+[2019-06-07 12:31:19:588] [info]:  geth: INFO [06-07|12:31:19.583] Commit new mining work                   number=218 sealhash=9e7481…ecd431 uncles=1 txs=0 gas=0       fees=0            elapsed=383.148µs
+[2019-06-07 12:31:19:588] [info]:  INFO [06-07|12:31:19.584] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:589] [info]:  
+[2019-06-07 12:31:19:589] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0x002bF1F1A26ef715d395aDDa31965942Ff16DeB2", 10000000000000000000000000)[22m | 0x0ebcb1604c5c2ed54e076266ef742b7a9af017fc66738d130b3828a816ea3a2a | gas:109678 | blk:214 | status:0x1
+[2019-06-07 12:31:19:590] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0xEF7e02309Aa2ed0f35EDE5b1eDaCEdFb48F407Ef", 10000000000000000000000000)[22m | 0x4f00c31850284cf8e03bedaf610877e28109ca259c1484c803d0f1818980f7c5 | gas:96912 | blk:215 | status:0x1
+[2019-06-07 12:31:19:595] [info]:  geth: INFO [06-07|12:31:19.592] Submitted transaction                    fullhash=0x31ce7dbd58eed514641491ab749b6510022bb64beb392b78c5561d71789dada0 recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:595] [info]:  
+[2019-06-07 12:31:19:596] [info]:  geth: INFO [06-07|12:31:19.592] Commit new mining work                   number=218 sealhash=9e7481…ecd431 uncles=1 txs=0 gas=0       fees=0            elapsed=106.568µs
+[2019-06-07 12:31:19:596] [info]:  
+[2019-06-07 12:31:19:596] [info]:  geth: INFO [06-07|12:31:19.592] Commit new mining work                   number=218 sealhash=0d59e2…7e02d1 uncles=1 txs=1 gas=96912   fees=9.6912e-14   elapsed=566.814µs
+[2019-06-07 12:31:19:596] [info]:  
+[2019-06-07 12:31:19:596] [info]:  geth: INFO [06-07|12:31:19.593] Successfully sealed new block            number=218 sealhash=0d59e2…7e02d1 hash=961494…ae7380 elapsed=765.212µs
+[2019-06-07 12:31:19:597] [info]:  
+[2019-06-07 12:31:19:597] [info]:  geth: INFO [06-07|12:31:19.593] 😱 block lost                             number=211 hash=89d820…05e447
+[2019-06-07 12:31:19:597] [info]:  INFO [06-07|12:31:19.593] 🔗 block reached canonical chain          number=211 hash=1551fd…eb1d54
+[2019-06-07 12:31:19:597] [info]:  INFO [06-07|12:31:19.593] 🔨 mined potential block                  number=218 hash=961494…ae7380
+[2019-06-07 12:31:19:597] [info]:  
+[2019-06-07 12:31:19:601] [info]:  geth: INFO [06-07|12:31:19.594] Commit new mining work                   number=219 sealhash=5406b8…44b08a uncles=1 txs=0 gas=0       fees=0            elapsed=693.522µs
+[2019-06-07 12:31:19:601] [info]:  INFO [06-07|12:31:19.594] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:601] [info]:  
+[2019-06-07 12:31:19:601] [info]:  geth: INFO [06-07|12:31:19.596] Submitted transaction                    fullhash=0x9f68f6019e381f3f4396251f2d28cdba4895549a478976347c9c8d62694dca6f recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:601] [info]:  INFO [06-07|12:31:19.597] Commit new mining work                   number=219 sealhash=5406b8…44b08a uncles=1 txs=0 gas=0       fees=0            elapsed=140.013µs
+[2019-06-07 12:31:19:602] [info]:  
+[2019-06-07 12:31:19:602] [info]:  geth: INFO [06-07|12:31:19.598] Commit new mining work                   number=219 sealhash=3cf77a…ba527b uncles=1 txs=1 gas=96912   fees=9.6912e-14   elapsed=1.258ms
+[2019-06-07 12:31:19:602] [info]:  
+[2019-06-07 12:31:19:602] [info]:  geth: INFO [06-07|12:31:19.599] Successfully sealed new block            number=219 sealhash=3cf77a…ba527b hash=570aa0…6bb595 elapsed=982.22µs
+[2019-06-07 12:31:19:602] [info]:  INFO [06-07|12:31:19.599] 😱 block lost                             number=212 hash=82ff6e…0caedb
+[2019-06-07 12:31:19:602] [info]:  INFO [06-07|12:31:19.599] 🔗 block reached canonical chain          number=212 hash=5e46be…9b1f4c
+[2019-06-07 12:31:19:603] [info]:  INFO [06-07|12:31:19.599] 🔨 mined potential block                  number=219 hash=570aa0…6bb595
+[2019-06-07 12:31:19:603] [info]:  INFO [06-07|12:31:19.599] Submitted transaction                    fullhash=0x62ba377653e7b2a9eaa0bbf88571d8b9d4591dd8a3f21e5806caeda84b5c60ef recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:603] [info]:  
+[2019-06-07 12:31:19:607] [info]:  geth: INFO [06-07|12:31:19.599] Commit new mining work                   number=220 sealhash=b003a4…a43c07 uncles=1 txs=0 gas=0       fees=0            elapsed=682.825µs
+[2019-06-07 12:31:19:607] [info]:  INFO [06-07|12:31:19.600] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:607] [info]:  INFO [06-07|12:31:19.601] Commit new mining work                   number=220 sealhash=24f506…def158 uncles=1 txs=1 gas=96912   fees=9.6912e-14   elapsed=2.057ms
+[2019-06-07 12:31:19:607] [info]:  
+[2019-06-07 12:31:19:608] [info]:  geth: INFO [06-07|12:31:19.601] Commit new mining work                   number=220 sealhash=b003a4…a43c07 uncles=1 txs=0 gas=0       fees=0            elapsed=73.698µs
+[2019-06-07 12:31:19:608] [info]:  INFO [06-07|12:31:19.601] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:608] [info]:  INFO [06-07|12:31:19.602] Commit new mining work                   number=220 sealhash=24f506…def158 uncles=1 txs=1 gas=96912   fees=9.6912e-14   elapsed=834.722µs
+[2019-06-07 12:31:19:608] [info]:  INFO [06-07|12:31:19.602] Submitted transaction                    fullhash=0xdf2332a4947f1c07829d9b8a2ea0a6ca8904690586ccabd0bd79997918eb8a97 recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:608] [info]:  INFO [06-07|12:31:19.602] Successfully sealed new block            number=220 sealhash=24f506…def158 hash=3f899e…aeb1de elapsed=1.446ms
+[2019-06-07 12:31:19:608] [info]:  INFO [06-07|12:31:19.602] 🔗 block reached canonical chain          number=213 hash=6d3edd…de73d7
+[2019-06-07 12:31:19:608] [info]:  INFO [06-07|12:31:19.602] 🔨 mined potential block                  number=220 hash=3f899e…aeb1de
+[2019-06-07 12:31:19:608] [info]:  
+[2019-06-07 12:31:19:608] [info]:  geth: INFO [06-07|12:31:19.602] Commit new mining work                   number=221 sealhash=55a2ae…deae2d uncles=0 txs=0 gas=0       fees=0            elapsed=599.838µs
+[2019-06-07 12:31:19:609] [info]:  INFO [06-07|12:31:19.603] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:609] [info]:  
+[2019-06-07 12:31:19:609] [info]:  geth: INFO [06-07|12:31:19.603] Commit new mining work                   number=221 sealhash=f58053…ad49ba uncles=0 txs=1 gas=96912   fees=9.6912e-14   elapsed=1.335ms
+[2019-06-07 12:31:19:609] [info]:  
+[2019-06-07 12:31:19:609] [info]:  geth: INFO [06-07|12:31:19.604] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:609] [info]:  INFO [06-07|12:31:19.604] Commit new mining work                   number=221 sealhash=55a2ae…deae2d uncles=0 txs=0 gas=0       fees=0            elapsed=232.663µs
+[2019-06-07 12:31:19:609] [info]:  
+[2019-06-07 12:31:19:609] [info]:  geth: INFO [06-07|12:31:19.604] Commit new mining work                   number=221 sealhash=f58053…ad49ba uncles=0 txs=1 gas=96912   fees=9.6912e-14   elapsed=730.9µs
+[2019-06-07 12:31:19:609] [info]:  
+[2019-06-07 12:31:19:609] [info]:  geth: INFO [06-07|12:31:19.605] Successfully sealed new block            number=221 sealhash=f58053…ad49ba hash=0b3e3a…08e55b elapsed=973.015µs
+[2019-06-07 12:31:19:610] [info]:  
+[2019-06-07 12:31:19:610] [info]:  geth: INFO [06-07|12:31:19.605] 🔗 block reached canonical chain          number=214 hash=b7e50e…390e28
+[2019-06-07 12:31:19:610] [info]:  
+[2019-06-07 12:31:19:610] [info]:  geth: INFO [06-07|12:31:19.605] 😱 block lost                             number=214 hash=7883a3…0ae594
+[2019-06-07 12:31:19:610] [info]:  INFO [06-07|12:31:19.605] 🔨 mined potential block                  number=221 hash=0b3e3a…08e55b
+[2019-06-07 12:31:19:610] [info]:  
+[2019-06-07 12:31:19:610] [info]:  geth: INFO [06-07|12:31:19.606] Commit new mining work                   number=222 sealhash=b05dfa…2ae92a uncles=0 txs=0 gas=0       fees=0            elapsed=409.727µs
+[2019-06-07 12:31:19:610] [info]:  INFO [06-07|12:31:19.606] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:610] [info]:  
+[2019-06-07 12:31:19:611] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0xB009d6c0A5b2e063438cc7A96a0Dacb2b87196D3", 10000000000000000000000000)[22m | 0x00eebdcbf627edcee6dcc57a44cfc4faeed216ff3dd319a7531b39c6e639c8f0 | gas:96912 | blk:216 | status:0x1
+[2019-06-07 12:31:19:612] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0xC0fa637BC5446a202dACC2CCE4257B62dAf68360", 10000000000000000000000000)[22m | 0x4b42519caed4cd85bf963000fbbf3d3fa44020c0e88a6f9b0fed65946a4e5ea3 | gas:96912 | blk:217 | status:0x1
+[2019-06-07 12:31:19:615] [info]:  geth: INFO [06-07|12:31:19.613] Submitted transaction                    fullhash=0x90025bae1c569311a964cd0cd8284668ca62069b4ab9eb3a87ab1aae3db8a1d4 recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:616] [info]:  
+[2019-06-07 12:31:19:616] [info]:  geth: INFO [06-07|12:31:19.613] Commit new mining work                   number=222 sealhash=b05dfa…2ae92a uncles=0 txs=0 gas=0       fees=0            elapsed=69.663µs
+[2019-06-07 12:31:19:616] [info]:  INFO [06-07|12:31:19.613] Submitted transaction                    fullhash=0xb14b74dd733cf25f96cde2930e6c0edad432b3beba825154ab61c7d5ad4023f4 recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:616] [info]:  
+[2019-06-07 12:31:19:616] [info]:  geth: INFO [06-07|12:31:19.613] Commit new mining work                   number=222 sealhash=5ab137…16cfd8 uncles=0 txs=1 gas=96912   fees=9.6912e-14   elapsed=544.365µs
+[2019-06-07 12:31:19:617] [info]:  INFO [06-07|12:31:19.614] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:617] [info]:  INFO [06-07|12:31:19.614] Commit new mining work                   number=222 sealhash=b05dfa…2ae92a uncles=0 txs=0 gas=0       fees=0            elapsed=243.802µs
+[2019-06-07 12:31:19:617] [info]:  
+[2019-06-07 12:31:19:617] [info]:  geth: INFO [06-07|12:31:19.614] Successfully sealed new block            number=222 sealhash=5ab137…16cfd8 hash=cea0fc…709fa2 elapsed=745.264µs
+[2019-06-07 12:31:19:617] [info]:  INFO [06-07|12:31:19.614] 🔗 block reached canonical chain          number=215 hash=ca3906…c67409
+[2019-06-07 12:31:19:617] [info]:  INFO [06-07|12:31:19.614] 🔨 mined potential block                  number=222 hash=cea0fc…709fa2
+[2019-06-07 12:31:19:617] [info]:  
+[2019-06-07 12:31:19:618] [info]:  geth: INFO [06-07|12:31:19.615] Commit new mining work                   number=222 sealhash=b87af2…18d711 uncles=0 txs=2 gas=173317  fees=1.73317e-13  elapsed=1.124ms
+[2019-06-07 12:31:19:618] [info]:  
+[2019-06-07 12:31:19:621] [info]:  geth: INFO [06-07|12:31:19.615] Submitted transaction                    fullhash=0x82648e9bf6af452b5edf477b6af9927700c71a6c7ec09765ce2a697b9180ebdc recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:621] [info]:  INFO [06-07|12:31:19.615] Commit new mining work                   number=223 sealhash=28ad1a…a39b7d uncles=0 txs=0 gas=0       fees=0            elapsed=331.797µs
+[2019-06-07 12:31:19:621] [info]:  INFO [06-07|12:31:19.615] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:621] [info]:  
+[2019-06-07 12:31:19:621] [info]:  geth: INFO [06-07|12:31:19.615] Successfully sealed new block            number=222 sealhash=b87af2…18d711 hash=a621ae…08ac0b elapsed=915.206µs
+[2019-06-07 12:31:19:621] [info]:  INFO [06-07|12:31:19.615] 🔨 mined potential block                  number=222 hash=a621ae…08ac0b
+[2019-06-07 12:31:19:622] [info]:  INFO [06-07|12:31:19.616] Commit new mining work                   number=223 sealhash=67ff39…431020 uncles=0 txs=2 gas=173317  fees=1.73317e-13  elapsed=1.458ms
+[2019-06-07 12:31:19:622] [info]:  
+[2019-06-07 12:31:19:622] [info]:  geth: INFO [06-07|12:31:19.617] Successfully sealed new block            number=223 sealhash=67ff39…431020 hash=12ee7a…0eae7e elapsed=769.678µs
+[2019-06-07 12:31:19:622] [info]:  
+[2019-06-07 12:31:19:622] [info]:  geth: INFO [06-07|12:31:19.617] 🔗 block reached canonical chain          number=216 hash=e72ad0…1beed4
+[2019-06-07 12:31:19:622] [info]:  
+[2019-06-07 12:31:19:622] [info]:  geth: INFO [06-07|12:31:19.617] 🔨 mined potential block                  number=223 hash=12ee7a…0eae7e
+[2019-06-07 12:31:19:622] [info]:  
+[2019-06-07 12:31:19:622] [info]:  geth: INFO [06-07|12:31:19.617] Commit new mining work                   number=223 sealhash=67ff39…431020 uncles=1 txs=2 gas=173317  fees=1.73317e-13  elapsed=287.2µs
+[2019-06-07 12:31:19:623] [info]:  
+[2019-06-07 12:31:19:623] [info]:  geth: INFO [06-07|12:31:19.618] Commit new mining work                   number=224 sealhash=794b67…ed24f5 uncles=1 txs=0 gas=0       fees=0            elapsed=367.154µs
+[2019-06-07 12:31:19:623] [info]:  INFO [06-07|12:31:19.618] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:623] [info]:  
+[2019-06-07 12:31:19:623] [info]:  geth: INFO [06-07|12:31:19.618] Commit new mining work                   number=224 sealhash=794b67…ed24f5 uncles=1 txs=0 gas=0       fees=0            elapsed=133.627µs
+[2019-06-07 12:31:19:623] [info]:  
+[2019-06-07 12:31:19:623] [info]:  geth: INFO [06-07|12:31:19.619] Submitted transaction                    fullhash=0x7d9a03bd87a6827ea64a62c41395d9ffef4b53912c5b04fe8cb57d8efffbff1c recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:623] [info]:  
+[2019-06-07 12:31:19:623] [info]:  geth: INFO [06-07|12:31:19.619] Commit new mining work                   number=224 sealhash=794b67…ed24f5 uncles=1 txs=0 gas=0       fees=0            elapsed=77.701µs
+[2019-06-07 12:31:19:624] [info]:  
+[2019-06-07 12:31:19:624] [info]:  geth: INFO [06-07|12:31:19.620] Commit new mining work                   number=224 sealhash=328aec…492d2d uncles=1 txs=1 gas=96912   fees=9.6912e-14   elapsed=483.026µs
+[2019-06-07 12:31:19:624] [info]:  
+[2019-06-07 12:31:19:625] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0x9267Ad0a55471F37D77498BD1999F566Ad9BeF8d", 10000000000000000000000000)[22m | 0x31ce7dbd58eed514641491ab749b6510022bb64beb392b78c5561d71789dada0 | gas:96912 | blk:218 | status:0x1
+[2019-06-07 12:31:19:625] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0xd73F2fE7ADebF899716B74619D6528eB1d673FeE", 10000000000000000000000000)[22m | 0x9f68f6019e381f3f4396251f2d28cdba4895549a478976347c9c8d62694dca6f | gas:96912 | blk:219 | status:0x1
+[2019-06-07 12:31:19:626] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0x0D9E01dB73bF91f31ce970b0BC68d8fbDf017fE3", 10000000000000000000000000)[22m | 0x62ba377653e7b2a9eaa0bbf88571d8b9d4591dd8a3f21e5806caeda84b5c60ef | gas:96912 | blk:220 | status:0x1
+[2019-06-07 12:31:19:633] [info]:  geth: INFO [06-07|12:31:19.621] Successfully sealed new block            number=224 sealhash=328aec…492d2d hash=ad7deb…75f697 elapsed=648.578µs
+[2019-06-07 12:31:19:634] [info]:  INFO [06-07|12:31:19.621] 🔗 block reached canonical chain          number=217 hash=bcec09…af4b05
+[2019-06-07 12:31:19:634] [info]:  INFO [06-07|12:31:19.621] 🔨 mined potential block                  number=224 hash=ad7deb…75f697
+[2019-06-07 12:31:19:634] [info]:  
+[2019-06-07 12:31:19:634] [info]:  geth: INFO [06-07|12:31:19.621] Commit new mining work                   number=225 sealhash=f79e16…91b001 uncles=1 txs=0 gas=0       fees=0            elapsed=588.955µs
+[2019-06-07 12:31:19:634] [info]:  INFO [06-07|12:31:19.621] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:634] [info]:  
+[2019-06-07 12:31:19:635] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0x5a184fdbd7270d3fE779D2A9520E14FE6A7b921f", 10000000000000000000000000)[22m | 0xdf2332a4947f1c07829d9b8a2ea0a6ca8904690586ccabd0bd79997918eb8a97 | gas:96912 | blk:221 | status:0x1
+[2019-06-07 12:31:19:642] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0x88C884a8dA1Bcc2eC18B3d0946d5e3a76be9d422", 10000000000000000000000000)[22m | 0x90025bae1c569311a964cd0cd8284668ca62069b4ab9eb3a87ab1aae3db8a1d4 | gas:96912 | blk:222 | status:0x1
+[2019-06-07 12:31:19:643] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0x1d648db4824a16a66187e00593A6294d4FeE571c", 10000000000000000000000000)[22m | 0xb14b74dd733cf25f96cde2930e6c0edad432b3beba825154ab61c7d5ad4023f4 | gas:96912 | blk:223 | status:0x1
+[2019-06-07 12:31:19:649] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0xdA31d2C88Fc733571c038D84b166826d2e3824F7", 10000000000000000000000000)[22m | 0x82648e9bf6af452b5edf477b6af9927700c71a6c7ec09765ce2a697b9180ebdc | gas:76405 | blk:223 | status:0x1
+[2019-06-07 12:31:19:650] [info]:  [4mBlockchain>[24m[1m SNT.generateTokens("0xcE5DbdecC9F376896A8B63CE3599F78e34692476", 10000000000000000000000000)[22m | 0x7d9a03bd87a6827ea64a62c41395d9ffef4b53912c5b04fe8cb57d8efffbff1c | gas:96912 | blk:224 | status:0x1
+[2019-06-07 12:31:19:655] [info]:  Generate Standard Tokens
+[2019-06-07 12:31:19:676] [info]:  geth: INFO [06-07|12:31:19.674] Submitted transaction                    fullhash=0xc7c308fad02cdf77a7b57a37c8c0e050699a5b8a903974bf3b576324201bd721 recipient=0x99364F2b398edFCF242D7506ce35AF781df518Ce
+[2019-06-07 12:31:19:676] [info]:  
+[2019-06-07 12:31:19:676] [info]:  geth: INFO [06-07|12:31:19.674] Commit new mining work                   number=225 sealhash=f79e16…91b001 uncles=1 txs=0 gas=0       fees=0            elapsed=107.101µs
+[2019-06-07 12:31:19:676] [info]:  INFO [06-07|12:31:19.675] Commit new mining work                   number=225 sealhash=27c02d…c2c581 uncles=1 txs=1 gas=65687   fees=6.5687e-14   elapsed=411.463µs
+[2019-06-07 12:31:19:677] [info]:  
+[2019-06-07 12:31:19:679] [info]:  geth: INFO [06-07|12:31:19.675] Successfully sealed new block            number=225 sealhash=27c02d…c2c581 hash=23c08a…74830d elapsed=733.442µs
+[2019-06-07 12:31:19:679] [info]:  INFO [06-07|12:31:19.676] 🔗 block reached canonical chain          number=218 hash=961494…ae7380
+[2019-06-07 12:31:19:679] [info]:  INFO [06-07|12:31:19.676] 🔨 mined potential block                  number=225 hash=23c08a…74830d
+[2019-06-07 12:31:19:679] [info]:  
+[2019-06-07 12:31:19:679] [info]:  geth: INFO [06-07|12:31:19.676] Submitted transaction                    fullhash=0xa75038087661b7445f19cb3ccbe93609baf5c2fba862f1114e8ee8f8d7ce3c8d recipient=0x99364F2b398edFCF242D7506ce35AF781df518Ce
+[2019-06-07 12:31:19:679] [info]:  
+[2019-06-07 12:31:19:680] [info]:  geth: INFO [06-07|12:31:19.676] Commit new mining work                   number=226 sealhash=95e01f…c90188 uncles=1 txs=0 gas=0       fees=0            elapsed=437.782µs
+[2019-06-07 12:31:19:680] [info]:  INFO [06-07|12:31:19.676] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:680] [info]:  INFO [06-07|12:31:19.676] Submitted transaction                    fullhash=0xfc6db67e9b3bc5238fa7d633938162f5ed69daa1fc74562f871a57d03ae65474 recipient=0x99364F2b398edFCF242D7506ce35AF781df518Ce
+[2019-06-07 12:31:19:680] [info]:  
+[2019-06-07 12:31:19:680] [info]:  geth: INFO [06-07|12:31:19.677] Commit new mining work                   number=226 sealhash=5655c6…6b816f uncles=1 txs=1 gas=50623   fees=5.0623e-14   elapsed=993.86µs
+[2019-06-07 12:31:19:680] [info]:  INFO [06-07|12:31:19.677] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:681] [info]:  INFO [06-07|12:31:19.677] Commit new mining work                   number=226 sealhash=95e01f…c90188 uncles=1 txs=0 gas=0       fees=0            elapsed=389.527µs
+[2019-06-07 12:31:19:681] [info]:  INFO [06-07|12:31:19.677] Successfully sealed new block            number=226 sealhash=5655c6…6b816f hash=6e468b…5a2393 elapsed=956.058µs
+[2019-06-07 12:31:19:681] [info]:  INFO [06-07|12:31:19.678] 🔗 block reached canonical chain          number=219 hash=570aa0…6bb595
+[2019-06-07 12:31:19:681] [info]:  INFO [06-07|12:31:19.678] 🔨 mined potential block                  number=226 hash=6e468b…5a2393
+[2019-06-07 12:31:19:681] [info]:  
+[2019-06-07 12:31:19:683] [info]:  geth: INFO [06-07|12:31:19.678] Commit new mining work                   number=226 sealhash=7880d3…de3c59 uncles=1 txs=2 gas=101310  fees=1.0131e-13   elapsed=930.048µs
+[2019-06-07 12:31:19:684] [info]:  INFO [06-07|12:31:19.678] Commit new mining work                   number=227 sealhash=5890eb…fd1237 uncles=1 txs=0 gas=0       fees=0            elapsed=591.502µs
+[2019-06-07 12:31:19:684] [info]:  INFO [06-07|12:31:19.678] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:684] [info]:  
+[2019-06-07 12:31:19:684] [info]:  geth: INFO [06-07|12:31:19.679] Successfully sealed new block            number=226 sealhash=7880d3…de3c59 hash=eabe06…ff4aad elapsed=993.112µs
+[2019-06-07 12:31:19:684] [info]:  INFO [06-07|12:31:19.679] 🔨 mined potential block                  number=226 hash=eabe06…ff4aad
+[2019-06-07 12:31:19:684] [info]:  INFO [06-07|12:31:19.679] Submitted transaction                    fullhash=0xdd7a3049f56718ddfc5f85fd6e6cf9df440db899bc1fef1ad60e6d792c36fb22 recipient=0x99364F2b398edFCF242D7506ce35AF781df518Ce
+[2019-06-07 12:31:19:684] [info]:  INFO [06-07|12:31:19.679] Commit new mining work                   number=227 sealhash=5890eb…fd1237 uncles=1 txs=0 gas=0       fees=0            elapsed=1.295ms
+[2019-06-07 12:31:19:684] [info]:  INFO [06-07|12:31:19.680] Submitted transaction                    fullhash=0xe0120bdcfd6e7ea9e67063b8cea9fcf2eea25e308cfc487bd9fe2307043cec3b recipient=0x99364F2b398edFCF242D7506ce35AF781df518Ce
+[2019-06-07 12:31:19:685] [info]:  INFO [06-07|12:31:19.680] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:685] [info]:  INFO [06-07|12:31:19.680] Commit new mining work                   number=227 sealhash=1cd4b7…ba3283 uncles=1 txs=0 gas=0       fees=0            elapsed=494.996µs
+[2019-06-07 12:31:19:685] [info]:  
+[2019-06-07 12:31:19:685] [info]:  geth: INFO [06-07|12:31:19.680] Commit new mining work                   number=227 sealhash=f3a7ae…14baf8 uncles=1 txs=2 gas=101374  fees=1.01374e-13  elapsed=1.007ms
+[2019-06-07 12:31:19:685] [info]:  INFO [06-07|12:31:19.680] Submitted transaction                    fullhash=0x20df69fb633f14c8ec3001674d91b7d61bd2afa1599bb7b100785c1df34bdb7e recipient=0x99364F2b398edFCF242D7506ce35AF781df518Ce
+[2019-06-07 12:31:19:685] [info]:  INFO [06-07|12:31:19.681] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:686] [info]:  INFO [06-07|12:31:19.681] Commit new mining work                   number=227 sealhash=1cd4b7…ba3283 uncles=1 txs=0 gas=0       fees=0            elapsed=229.831µs
+[2019-06-07 12:31:19:686] [info]:  INFO [06-07|12:31:19.681] Commit new mining work                   number=227 sealhash=1cd4b7…ba3283 uncles=1 txs=0 gas=0       fees=0            elapsed=67.397µs
+[2019-06-07 12:31:19:686] [info]:  INFO [06-07|12:31:19.681] Successfully sealed new block            number=227 sealhash=f3a7ae…14baf8 hash=189c26…efd4e1 elapsed=752.705µs
+[2019-06-07 12:31:19:686] [info]:  INFO [06-07|12:31:19.681] 🔗 block reached canonical chain          number=220 hash=3f899e…aeb1de
+[2019-06-07 12:31:19:686] [info]:  INFO [06-07|12:31:19.681] 🔨 mined potential block                  number=227 hash=189c26…efd4e1
+[2019-06-07 12:31:19:686] [info]:  INFO [06-07|12:31:19.681] Submitted transaction                    fullhash=0xa4c4c0d145723d95d4a3cb7d52c309c9960a074d234e71dfeeb406a4331f3bc2 recipient=0x99364F2b398edFCF242D7506ce35AF781df518Ce
+[2019-06-07 12:31:19:686] [info]:  INFO [06-07|12:31:19.681] Commit new mining work                   number=227 sealhash=7d763e…b4ddb6 uncles=2 txs=3 gas=152061  fees=1.52061e-13  elapsed=222.18µs
+[2019-06-07 12:31:19:687] [info]:  
+[2019-06-07 12:31:19:688] [info]:  [4mBlockchain>[24m[1m StandardToken.mint("0xB009d6c0A5b2e063438cc7A96a0Dacb2b87196D3", 5000000000000)[22m | 0xc7c308fad02cdf77a7b57a37c8c0e050699a5b8a903974bf3b576324201bd721 | gas:65687 | blk:225 | status:0x1
+[2019-06-07 12:31:19:691] [info]:  geth: INFO [06-07|12:31:19.682] Successfully sealed new block            number=227 sealhash=7d763e…b4ddb6 hash=2bf6db…9802ae elapsed=548.886µs
+[2019-06-07 12:31:19:692] [info]:  INFO [06-07|12:31:19.682] 🔨 mined potential block                  number=227 hash=2bf6db…9802ae
+[2019-06-07 12:31:19:692] [info]:  INFO [06-07|12:31:19.682] Commit new mining work                   number=228 sealhash=6095cb…979966 uncles=2 txs=0 gas=0       fees=0            elapsed=398.046µs
+[2019-06-07 12:31:19:692] [info]:  INFO [06-07|12:31:19.682] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:692] [info]:  INFO [06-07|12:31:19.682] Commit new mining work                   number=228 sealhash=974af8…40337c uncles=2 txs=2 gas=101374  fees=1.01374e-13  elapsed=886.076µs
+[2019-06-07 12:31:19:692] [info]:  INFO [06-07|12:31:19.683] Commit new mining work                   number=228 sealhash=6095cb…979966 uncles=2 txs=0 gas=0       fees=0            elapsed=116.021µs
+[2019-06-07 12:31:19:693] [info]:  INFO [06-07|12:31:19.683] Successfully sealed new block            number=228 sealhash=974af8…40337c hash=0a5c13…299a9d elapsed=650.543µs
+[2019-06-07 12:31:19:693] [info]:  INFO [06-07|12:31:19.683] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:693] [info]:  INFO [06-07|12:31:19.683] 🔗 block reached canonical chain          number=221 hash=0b3e3a…08e55b
+[2019-06-07 12:31:19:693] [info]:  INFO [06-07|12:31:19.683] 🔨 mined potential block                  number=228 hash=0a5c13…299a9d
+[2019-06-07 12:31:19:693] [info]:  INFO [06-07|12:31:19.683] Commit new mining work                   number=228 sealhash=974af8…40337c uncles=2 txs=2 gas=101374  fees=1.01374e-13  elapsed=557.966µs
+[2019-06-07 12:31:19:693] [info]:  
+[2019-06-07 12:31:19:693] [info]:  geth: INFO [06-07|12:31:19.684] Commit new mining work                   number=229 sealhash=291fc0…ab8ca8 uncles=2 txs=0 gas=0       fees=0            elapsed=453.064µs
+[2019-06-07 12:31:19:693] [info]:  INFO [06-07|12:31:19.684] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:694] [info]:  INFO [06-07|12:31:19.684] Commit new mining work                   number=229 sealhash=291fc0…ab8ca8 uncles=2 txs=0 gas=0       fees=0            elapsed=115.545µs
+[2019-06-07 12:31:19:694] [info]:  INFO [06-07|12:31:19.684] Commit new mining work                   number=229 sealhash=291fc0…ab8ca8 uncles=2 txs=0 gas=0       fees=0            elapsed=110.683µs
+[2019-06-07 12:31:19:694] [info]:  INFO [06-07|12:31:19.686] Submitted transaction                    fullhash=0xfaadb136a6925ab1180fe6a5efcb1485ea2d86676b424feb1564e973d13cba43 recipient=0x99364F2b398edFCF242D7506ce35AF781df518Ce
+[2019-06-07 12:31:19:694] [info]:  INFO [06-07|12:31:19.686] Commit new mining work                   number=229 sealhash=291fc0…ab8ca8 uncles=2 txs=0 gas=0       fees=0            elapsed=192.155µs
+[2019-06-07 12:31:19:694] [info]:  INFO [06-07|12:31:19.687] Commit new mining work                   number=229 sealhash=a3c2d9…2173a7 uncles=2 txs=1 gas=50687   fees=5.0687e-14   elapsed=805.369µs
+[2019-06-07 12:31:19:694] [info]:  
+[2019-06-07 12:31:19:694] [info]:  geth: INFO [06-07|12:31:19.688] Successfully sealed new block            number=229 sealhash=a3c2d9…2173a7 hash=547cf9…2f6317 elapsed=1.056ms
+[2019-06-07 12:31:19:694] [info]:  INFO [06-07|12:31:19.688] 🔗 block reached canonical chain          number=222 hash=cea0fc…709fa2
+[2019-06-07 12:31:19:694] [info]:  INFO [06-07|12:31:19.688] 😱 block lost                             number=222 hash=a621ae…08ac0b
+[2019-06-07 12:31:19:695] [info]:  INFO [06-07|12:31:19.688] 🔨 mined potential block                  number=229 hash=547cf9…2f6317
+[2019-06-07 12:31:19:695] [info]:  INFO [06-07|12:31:19.689] Commit new mining work                   number=230 sealhash=d7a991…51d480 uncles=2 txs=0 gas=0       fees=0            elapsed=754.934µs
+[2019-06-07 12:31:19:695] [info]:  INFO [06-07|12:31:19.689] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:695] [info]:  
+[2019-06-07 12:31:19:699] [info]:  [4mBlockchain>[24m[1m StandardToken.mint("0xEF7e02309Aa2ed0f35EDE5b1eDaCEdFb48F407Ef", 5000000000000)[22m | 0xfc6db67e9b3bc5238fa7d633938162f5ed69daa1fc74562f871a57d03ae65474 | gas:50687 | blk:226 | status:0x1
+[2019-06-07 12:31:19:699] [info]:  [4mBlockchain>[24m[1m StandardToken.mint("0x9267Ad0a55471F37D77498BD1999F566Ad9BeF8d", 5000000000000)[22m | 0xdd7a3049f56718ddfc5f85fd6e6cf9df440db899bc1fef1ad60e6d792c36fb22 | gas:50687 | blk:227 | status:0x1
+[2019-06-07 12:31:19:702] [info]:  [4mBlockchain>[24m[1m StandardToken.mint("0xd73F2fE7ADebF899716B74619D6528eB1d673FeE", 5000000000000)[22m | 0xe0120bdcfd6e7ea9e67063b8cea9fcf2eea25e308cfc487bd9fe2307043cec3b | gas:50687 | blk:227 | status:0x1
+[2019-06-07 12:31:19:703] [info]:  [4mBlockchain>[24m[1m StandardToken.mint("0xcE5DbdecC9F376896A8B63CE3599F78e34692476", 5000000000000)[22m | 0x20df69fb633f14c8ec3001674d91b7d61bd2afa1599bb7b100785c1df34bdb7e | gas:50687 | blk:228 | status:0x1
+[2019-06-07 12:31:19:707] [info]:  [4mBlockchain>[24m[1m StandardToken.mint("0xC0fa637BC5446a202dACC2CCE4257B62dAf68360", 5000000000000)[22m | 0xa4c4c0d145723d95d4a3cb7d52c309c9960a074d234e71dfeeb406a4331f3bc2 | gas:50687 | blk:228 | status:0x1
+[2019-06-07 12:31:19:708] [info]:  [4mBlockchain>[24m[1m StandardToken.mint("0xdA31d2C88Fc733571c038D84b166826d2e3824F7", 5000000000000)[22m | 0xfaadb136a6925ab1180fe6a5efcb1485ea2d86676b424feb1564e973d13cba43 | gas:50687 | blk:229 | status:0x1
+[2019-06-07 12:31:19:711] [info]:  Buy arbitration license
+[2019-06-07 12:31:19:711] [info]:  0xd9AF4949dD98839Fa61c5Ab0E4D79E0De9ee570D
+[2019-06-07 12:31:19:712] [info]:  10000000000000000000
+[2019-06-07 12:31:19:748] [info]:  geth: INFO [06-07|12:31:19.747] Setting new local account                address=0x0D9E01dB73bF91f31ce970b0BC68d8fbDf017fE3
+[2019-06-07 12:31:19:748] [info]:  
+[2019-06-07 12:31:19:748] [info]:  geth: INFO [06-07|12:31:19.748] Submitted transaction                    fullhash=0x26b17d35aa1f642ca69c89ac64628b4eca21398dfa80ad71512da4f200a03faf recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:748] [info]:  
+[2019-06-07 12:31:19:748] [info]:  geth: INFO [06-07|12:31:19.748] Commit new mining work                   number=230 sealhash=d7a991…51d480 uncles=2 txs=0 gas=0       fees=0            elapsed=87.633µs
+[2019-06-07 12:31:19:748] [info]:  
+[2019-06-07 12:31:19:749] [info]:  geth: INFO [06-07|12:31:19.749] Commit new mining work                   number=230 sealhash=ea4bb4…447cd1 uncles=2 txs=1 gas=225940  fees=2.2594e-13   elapsed=1.003ms
+[2019-06-07 12:31:19:749] [info]:  
+[2019-06-07 12:31:19:751] [info]:  geth: INFO [06-07|12:31:19.749] Successfully sealed new block            number=230 sealhash=ea4bb4…447cd1 hash=5f9668…afd586 elapsed=697.513µs
+[2019-06-07 12:31:19:751] [info]:  INFO [06-07|12:31:19.749] 🔗 block reached canonical chain          number=223 hash=12ee7a…0eae7e
+[2019-06-07 12:31:19:751] [info]:  INFO [06-07|12:31:19.749] 🔨 mined potential block                  number=230 hash=5f9668…afd586
+[2019-06-07 12:31:19:751] [info]:  INFO [06-07|12:31:19.750] Commit new mining work                   number=231 sealhash=fba5a3…c437e5 uncles=2 txs=0 gas=0       fees=0            elapsed=446.322µs
+[2019-06-07 12:31:19:751] [info]:  INFO [06-07|12:31:19.750] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:751] [info]:  
+[2019-06-07 12:31:19:753] [info]:  [4mBlockchain>[24m[1m SNT.approveAndCall("0xd9AF4949dD98839Fa61c5Ab0E4D79E0De9ee570D", 10000000000000000000, "0xa6f2ae3a")[22m | 0x26b17d35aa1f642ca69c89ac64628b4eca21398dfa80ad71512da4f200a03faf | gas:225940 | blk:230 | status:0x1
+[2019-06-07 12:31:19:754] [info]:  Buy Licenses...
+[2019-06-07 12:31:19:796] [info]:  geth: INFO [06-07|12:31:19.787] Setting new local account                address=0x002bF1F1A26ef715d395aDDa31965942Ff16DeB2
+[2019-06-07 12:31:19:797] [info]:  
+[2019-06-07 12:31:19:797] [info]:  geth: INFO [06-07|12:31:19.787] Submitted transaction                    fullhash=0x6eb2bb2b37b24eec97f05d40f63b47b815d5d5e4cc840365eb65875ada9fd2fd recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:797] [info]:  INFO [06-07|12:31:19.787] Commit new mining work                   number=231 sealhash=fba5a3…c437e5 uncles=2 txs=0 gas=0       fees=0            elapsed=129.358µs
+[2019-06-07 12:31:19:797] [info]:  
+[2019-06-07 12:31:19:797] [info]:  geth: INFO [06-07|12:31:19.788] Commit new mining work                   number=231 sealhash=6cadd3…35ee90 uncles=2 txs=1 gas=225962  fees=2.25962e-13  elapsed=1.112ms
+[2019-06-07 12:31:19:797] [info]:  
+[2019-06-07 12:31:19:798] [info]:  geth: INFO [06-07|12:31:19.790] Successfully sealed new block            number=231 sealhash=6cadd3…35ee90 hash=e12025…77e316 elapsed=1.703ms
+[2019-06-07 12:31:19:798] [info]:  
+[2019-06-07 12:31:19:798] [info]:  geth: INFO [06-07|12:31:19.790] 🔗 block reached canonical chain          number=224 hash=ad7deb…75f697
+[2019-06-07 12:31:19:798] [info]:  INFO [06-07|12:31:19.790] 🔨 mined potential block                  number=231 hash=e12025…77e316
+[2019-06-07 12:31:19:798] [info]:  
+[2019-06-07 12:31:19:798] [info]:  geth: INFO [06-07|12:31:19.790] Commit new mining work                   number=232 sealhash=af2ee6…010006 uncles=2 txs=0 gas=0       fees=0            elapsed=617.84µs
+[2019-06-07 12:31:19:798] [info]:  INFO [06-07|12:31:19.791] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:798] [info]:  
+[2019-06-07 12:31:19:801] [info]:  [4mBlockchain>[24m[1m SNT.approveAndCall("0x2c6c8Ff5Aea1CEa2c8ED67154A80751CCD483d1c", 10000000000000000000, "0xa6f2ae3a")[22m | 0x6eb2bb2b37b24eec97f05d40f63b47b815d5d5e4cc840365eb65875ada9fd2fd | gas:225962 | blk:231 | status:0x1
+[2019-06-07 12:31:19:821] [info]:  geth: INFO [06-07|12:31:19.814] Setting new local account                address=0x9267Ad0a55471F37D77498BD1999F566Ad9BeF8d
+[2019-06-07 12:31:19:821] [info]:  INFO [06-07|12:31:19.814] Submitted transaction                    fullhash=0x372f4cdd4b34cc6e27b51ec286f5af5b0f597f64d63c253aacdf6da5b2f0d4a9 recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:821] [info]:  
+[2019-06-07 12:31:19:821] [info]:  geth: INFO [06-07|12:31:19.815] Commit new mining work                   number=232 sealhash=af2ee6…010006 uncles=2 txs=0 gas=0       fees=0            elapsed=157.157µs
+[2019-06-07 12:31:19:821] [info]:  
+[2019-06-07 12:31:19:821] [info]:  geth: INFO [06-07|12:31:19.816] Commit new mining work                   number=232 sealhash=dac92b…5b75c7 uncles=2 txs=1 gas=198295  fees=1.98295e-13  elapsed=1.559ms
+[2019-06-07 12:31:19:821] [info]:  
+[2019-06-07 12:31:19:822] [info]:  geth: INFO [06-07|12:31:19.817] Successfully sealed new block            number=232 sealhash=dac92b…5b75c7 hash=0f464c…7fb645 elapsed=656.911µs
+[2019-06-07 12:31:19:822] [info]:  
+[2019-06-07 12:31:19:822] [info]:  geth: INFO [06-07|12:31:19.817] 🔗 block reached canonical chain          number=225 hash=23c08a…74830d
+[2019-06-07 12:31:19:822] [info]:  INFO [06-07|12:31:19.817] 🔨 mined potential block                  number=232 hash=0f464c…7fb645
+[2019-06-07 12:31:19:822] [info]:  
+[2019-06-07 12:31:19:822] [info]:  geth: INFO [06-07|12:31:19.817] Commit new mining work                   number=233 sealhash=cf5c49…400f67 uncles=1 txs=0 gas=0       fees=0            elapsed=361.204µs
+[2019-06-07 12:31:19:822] [info]:  INFO [06-07|12:31:19.817] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:822] [info]:  
+[2019-06-07 12:31:19:836] [info]:  [4mBlockchain>[24m[1m SNT.approveAndCall("0x2c6c8Ff5Aea1CEa2c8ED67154A80751CCD483d1c", 10000000000000000000, "0xa6f2ae3a")[22m | 0x372f4cdd4b34cc6e27b51ec286f5af5b0f597f64d63c253aacdf6da5b2f0d4a9 | gas:198295 | blk:232 | status:0x1
+[2019-06-07 12:31:19:841] [info]:  geth: INFO [06-07|12:31:19.840] Setting new local account                address=0xcE5DbdecC9F376896A8B63CE3599F78e34692476
+[2019-06-07 12:31:19:841] [info]:  
+[2019-06-07 12:31:19:841] [info]:  geth: INFO [06-07|12:31:19.840] Submitted transaction                    fullhash=0xc507947ed5571789dfdc2c94eed6e81b5f4552aed99db772b16e564223f190f6 recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:841] [info]:  
+[2019-06-07 12:31:19:841] [info]:  geth: INFO [06-07|12:31:19.840] Commit new mining work                   number=233 sealhash=cf5c49…400f67 uncles=1 txs=0 gas=0       fees=0            elapsed=119.512µs
+[2019-06-07 12:31:19:841] [info]:  
+[2019-06-07 12:31:19:843] [info]:  geth: INFO [06-07|12:31:19.841] Commit new mining work                   number=233 sealhash=4e8c46…fefd3e uncles=1 txs=1 gas=198295  fees=1.98295e-13  elapsed=1.289ms
+[2019-06-07 12:31:19:843] [info]:  
+[2019-06-07 12:31:19:844] [info]:  geth: INFO [06-07|12:31:19.842] Successfully sealed new block            number=233 sealhash=4e8c46…fefd3e hash=6f2980…5c6532 elapsed=923.417µs
+[2019-06-07 12:31:19:844] [info]:  INFO [06-07|12:31:19.842] 😱 block lost                             number=226 hash=6e468b…5a2393
+[2019-06-07 12:31:19:844] [info]:  INFO [06-07|12:31:19.842] 🔗 block reached canonical chain          number=226 hash=eabe06…ff4aad
+[2019-06-07 12:31:19:844] [info]:  INFO [06-07|12:31:19.842] 🔨 mined potential block                  number=233 hash=6f2980…5c6532
+[2019-06-07 12:31:19:844] [info]:  INFO [06-07|12:31:19.843] Commit new mining work                   number=234 sealhash=d95fc6…2175f3 uncles=0 txs=0 gas=0       fees=0            elapsed=501.897µs
+[2019-06-07 12:31:19:844] [info]:  INFO [06-07|12:31:19.843] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:844] [info]:  
+[2019-06-07 12:31:19:847] [info]:  [4mBlockchain>[24m[1m SNT.approveAndCall("0x2c6c8Ff5Aea1CEa2c8ED67154A80751CCD483d1c", 10000000000000000000, "0xa6f2ae3a")[22m | 0xc507947ed5571789dfdc2c94eed6e81b5f4552aed99db772b16e564223f190f6 | gas:198295 | blk:233 | status:0x1
+[2019-06-07 12:31:19:851] [info]:  geth: INFO [06-07|12:31:19.850] Setting new local account                address=0xC0fa637BC5446a202dACC2CCE4257B62dAf68360
+[2019-06-07 12:31:19:851] [info]:  
+[2019-06-07 12:31:19:851] [info]:  geth: INFO [06-07|12:31:19.850] Submitted transaction                    fullhash=0x6818878c9b3dd8b8121276419896f12138a10283b6bc418d24da7e6c71ddf1d3 recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:851] [info]:  
+[2019-06-07 12:31:19:851] [info]:  geth: INFO [06-07|12:31:19.850] Commit new mining work                   number=234 sealhash=d95fc6…2175f3 uncles=0 txs=0 gas=0       fees=0            elapsed=79.707µs
+[2019-06-07 12:31:19:852] [info]:  
+[2019-06-07 12:31:19:852] [info]:  geth: INFO [06-07|12:31:19.852] Commit new mining work                   number=234 sealhash=2be616…2b5218 uncles=0 txs=1 gas=198295  fees=1.98295e-13  elapsed=1.598ms
+[2019-06-07 12:31:19:853] [info]:  
+[2019-06-07 12:31:19:853] [info]:  geth: INFO [06-07|12:31:19.852] Successfully sealed new block            number=234 sealhash=2be616…2b5218 hash=b6d827…a59652 elapsed=819.565µs
+[2019-06-07 12:31:19:853] [info]:  INFO [06-07|12:31:19.853] 🔗 block reached canonical chain          number=227 hash=189c26…efd4e1
+[2019-06-07 12:31:19:853] [info]:  INFO [06-07|12:31:19.853] 😱 block lost                             number=227 hash=2bf6db…9802ae
+[2019-06-07 12:31:19:853] [info]:  INFO [06-07|12:31:19.853] 🔨 mined potential block                  number=234 hash=b6d827…a59652
+[2019-06-07 12:31:19:854] [info]:  
+[2019-06-07 12:31:19:856] [info]:  geth: INFO [06-07|12:31:19.853] Commit new mining work                   number=235 sealhash=cd40d4…dfdf91 uncles=0 txs=0 gas=0       fees=0            elapsed=528.532µs
+[2019-06-07 12:31:19:856] [info]:  
+[2019-06-07 12:31:19:856] [info]:  geth: INFO [06-07|12:31:19.853] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:856] [info]:  
+[2019-06-07 12:31:19:857] [info]:  [4mBlockchain>[24m[1m SNT.approveAndCall("0x2c6c8Ff5Aea1CEa2c8ED67154A80751CCD483d1c", 10000000000000000000, "0xa6f2ae3a")[22m | 0x6818878c9b3dd8b8121276419896f12138a10283b6bc418d24da7e6c71ddf1d3 | gas:198295 | blk:234 | status:0x1
+[2019-06-07 12:31:19:860] [info]:  geth: INFO [06-07|12:31:19.860] Setting new local account                address=0xd73F2fE7ADebF899716B74619D6528eB1d673FeE
+[2019-06-07 12:31:19:861] [info]:  
+[2019-06-07 12:31:19:861] [info]:  geth: INFO [06-07|12:31:19.860] Submitted transaction                    fullhash=0xfeff822b17d0f942da7a6f6c35708262deae5c8bf9d249a911013b941cf3ee5c recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:861] [info]:  
+[2019-06-07 12:31:19:861] [info]:  geth: INFO [06-07|12:31:19.860] Commit new mining work                   number=235 sealhash=cd40d4…dfdf91 uncles=0 txs=0 gas=0       fees=0            elapsed=56.527µs
+[2019-06-07 12:31:19:862] [info]:  
+[2019-06-07 12:31:19:862] [info]:  geth: INFO [06-07|12:31:19.861] Commit new mining work                   number=235 sealhash=3db131…ab9f18 uncles=0 txs=1 gas=198295  fees=1.98295e-13  elapsed=982.83µs
+[2019-06-07 12:31:19:862] [info]:  
+[2019-06-07 12:31:19:862] [info]:  geth: INFO [06-07|12:31:19.862] Successfully sealed new block            number=235 sealhash=3db131…ab9f18 hash=83d684…c8031c elapsed=838.726µs
+[2019-06-07 12:31:19:862] [info]:  
+[2019-06-07 12:31:19:862] [info]:  geth: INFO [06-07|12:31:19.862] 🔗 block reached canonical chain          number=228 hash=0a5c13…299a9d
+[2019-06-07 12:31:19:863] [info]:  INFO [06-07|12:31:19.862] 🔨 mined potential block                  number=235 hash=83d684…c8031c
+[2019-06-07 12:31:19:863] [info]:  
+[2019-06-07 12:31:19:864] [info]:  geth: INFO [06-07|12:31:19.862] Commit new mining work                   number=236 sealhash=619624…b1b66d uncles=0 txs=0 gas=0       fees=0            elapsed=538.144µs
+[2019-06-07 12:31:19:865] [info]:  INFO [06-07|12:31:19.862] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:865] [info]:  
+[2019-06-07 12:31:19:866] [info]:  [4mBlockchain>[24m[1m SNT.approveAndCall("0x2c6c8Ff5Aea1CEa2c8ED67154A80751CCD483d1c", 10000000000000000000, "0xa6f2ae3a")[22m | 0xfeff822b17d0f942da7a6f6c35708262deae5c8bf9d249a911013b941cf3ee5c | gas:198295 | blk:235 | status:0x1
+[2019-06-07 12:31:19:869] [info]:  geth: INFO [06-07|12:31:19.868] Setting new local account                address=0xEF7e02309Aa2ed0f35EDE5b1eDaCEdFb48F407Ef
+[2019-06-07 12:31:19:870] [info]:  
+[2019-06-07 12:31:19:870] [info]:  geth: INFO [06-07|12:31:19.869] Submitted transaction                    fullhash=0xd9a8cf2e5ddb55289e5da038c76bdcb07b20e6a28570c90c072898e0a9270fcd recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:870] [info]:  
+[2019-06-07 12:31:19:871] [info]:  geth: INFO [06-07|12:31:19.869] Commit new mining work                   number=236 sealhash=619624…b1b66d uncles=0 txs=0 gas=0       fees=0            elapsed=131.183µs
+[2019-06-07 12:31:19:871] [info]:  
+[2019-06-07 12:31:19:872] [info]:  geth: INFO [06-07|12:31:19.871] Commit new mining work                   number=236 sealhash=20ac2c…bad934 uncles=0 txs=1 gas=198295  fees=1.98295e-13  elapsed=2.072ms
+[2019-06-07 12:31:19:872] [info]:  
+[2019-06-07 12:31:19:875] [info]:  geth: INFO [06-07|12:31:19.871] Successfully sealed new block            number=236 sealhash=20ac2c…bad934 hash=af91ee…00c809 elapsed=781.004µs
+[2019-06-07 12:31:19:875] [info]:  INFO [06-07|12:31:19.871] 🔗 block reached canonical chain          number=229 hash=547cf9…2f6317
+[2019-06-07 12:31:19:875] [info]:  INFO [06-07|12:31:19.872] 🔨 mined potential block                  number=236 hash=af91ee…00c809
+[2019-06-07 12:31:19:875] [info]:  
+[2019-06-07 12:31:19:875] [info]:  geth: INFO [06-07|12:31:19.872] Commit new mining work                   number=237 sealhash=bc9989…7b6580 uncles=0 txs=0 gas=0       fees=0            elapsed=576.235µs
+[2019-06-07 12:31:19:875] [info]:  INFO [06-07|12:31:19.872] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:875] [info]:  
+[2019-06-07 12:31:19:876] [info]:  [4mBlockchain>[24m[1m SNT.approveAndCall("0x2c6c8Ff5Aea1CEa2c8ED67154A80751CCD483d1c", 10000000000000000000, "0xa6f2ae3a")[22m | 0xd9a8cf2e5ddb55289e5da038c76bdcb07b20e6a28570c90c072898e0a9270fcd | gas:198295 | blk:236 | status:0x1
+[2019-06-07 12:31:19:879] [info]:  geth: INFO [06-07|12:31:19.879] Setting new local account                address=0xdA31d2C88Fc733571c038D84b166826d2e3824F7
+[2019-06-07 12:31:19:879] [info]:  
+[2019-06-07 12:31:19:879] [info]:  geth: INFO [06-07|12:31:19.879] Submitted transaction                    fullhash=0xae87dd832d0462344669606300f7690d96f43486ee316e42047bf42ff3cfa28f recipient=0x5751123dB0d817a596D040d0fCB92a1A997e9952
+[2019-06-07 12:31:19:880] [info]:  
+[2019-06-07 12:31:19:880] [info]:  geth: INFO [06-07|12:31:19.879] Commit new mining work                   number=237 sealhash=bc9989…7b6580 uncles=0 txs=0 gas=0       fees=0            elapsed=94.64µs
+[2019-06-07 12:31:19:880] [info]:  
+[2019-06-07 12:31:19:881] [info]:  geth: INFO [06-07|12:31:19.880] Commit new mining work                   number=237 sealhash=e3ccd0…77fbd3 uncles=0 txs=1 gas=198295  fees=1.98295e-13  elapsed=1.331ms
+[2019-06-07 12:31:19:881] [info]:  
+[2019-06-07 12:31:19:881] [info]:  geth: INFO [06-07|12:31:19.881] Successfully sealed new block            number=237 sealhash=e3ccd0…77fbd3 hash=ea2255…9656dc elapsed=622.971µs
+[2019-06-07 12:31:19:882] [info]:  
+[2019-06-07 12:31:19:882] [info]:  geth: INFO [06-07|12:31:19.881] 🔗 block reached canonical chain          number=230 hash=5f9668…afd586
+[2019-06-07 12:31:19:882] [info]:  INFO [06-07|12:31:19.881] 🔨 mined potential block                  number=237 hash=ea2255…9656dc
+[2019-06-07 12:31:19:882] [info]:  
+[2019-06-07 12:31:19:882] [info]:  geth: INFO [06-07|12:31:19.881] Commit new mining work                   number=238 sealhash=ebd19f…638fb1 uncles=0 txs=0 gas=0       fees=0            elapsed=529.63µs
+[2019-06-07 12:31:19:882] [info]:  INFO [06-07|12:31:19.881] Sealing paused, waiting for transactions 
+[2019-06-07 12:31:19:882] [info]:  
+[2019-06-07 12:31:19:884] [info]:  Generating Offers...
+[2019-06-07 12:31:19:885] [info]:  ------- data seeding error ------- 
+[2019-06-07 12:31:19:886] [dir]:  Error: Invalid number of parameters for "addOffer". Got 8 expected 9!
+[2019-06-07 12:31:19:894] [info]:  Deployment Done
+[2019-06-07 12:31:19:895] [info]:  [4mBlockchain>[24m[1m SNT.approveAndCall("0x2c6c8Ff5Aea1CEa2c8ED67154A80751CCD483d1c", 10000000000000000000, "0xa6f2ae3a")[22m | 0xae87dd832d0462344669606300f7690d96f43486ee316e42047bf42ff3cfa28f | gas:198295 | blk:237 | status:0x1
+[2019-06-07 12:31:20:966] [debug]:  IPFS: Swarm listening on /ip4/10.0.85.1/tcp/4001
+[2019-06-07 12:31:20:966] [debug]:  Swarm listening on /ip4/127.0.0.1/tcp/4001
+[2019-06-07 12:31:20:966] [debug]:  Swarm listening on /ip4/172.17.0.1/tcp/4001
+[2019-06-07 12:31:20:966] [debug]:  Swarm listening on /ip4/192.168.1.192/tcp/4001
+[2019-06-07 12:31:20:966] [debug]:  Swarm listening on /ip6/::1/tcp/4001
+[2019-06-07 12:31:20:967] [debug]:  Swarm listening on /p2p-circuit
+[2019-06-07 12:31:20:967] [debug]:  
+[2019-06-07 12:31:20:967] [debug]:  IPFS: Swarm announcing /ip4/10.0.85.1/tcp/4001
+[2019-06-07 12:31:20:967] [debug]:  Swarm announcing /ip4/127.0.0.1/tcp/4001
+[2019-06-07 12:31:20:967] [debug]:  Swarm announcing /ip4/172.17.0.1/tcp/4001
+[2019-06-07 12:31:20:967] [debug]:  Swarm announcing /ip4/192.168.1.192/tcp/4001
+[2019-06-07 12:31:20:967] [debug]:  Swarm announcing /ip6/::1/tcp/4001
+[2019-06-07 12:31:20:967] [debug]:  
+[2019-06-07 12:31:20:967] [debug]:  IPFS: API server listening on /ip4/127.0.0.1/tcp/5001
+[2019-06-07 12:31:20:968] [debug]:  WebUI: http://127.0.0.1:5001/webui
+[2019-06-07 12:31:20:968] [debug]:  
+[2019-06-07 12:31:20:968] [debug]:  IPFS: Gateway (readonly) server listening on /ip4/127.0.0.1/tcp/8080
+[2019-06-07 12:31:20:968] [debug]:  
+[2019-06-07 12:31:20:968] [debug]:  IPFS: Daemon is ready
+[2019-06-07 12:31:20:968] [debug]:  
+[2019-06-07 12:31:21:059] [error]:  Error getting IPFS CORS config: 
+[2019-06-07 12:31:21:059] [error]:  ERROR: ld.so: object '/lib/$LIB/liblsp.so' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[2019-06-07 12:31:21:059] [error]:  ERROR: ld.so: object '/lib/$LIB/liblsp.so' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[2019-06-07 12:31:21:060] [error]:  ERROR: ld.so: object '/lib/$LIB/liblsp.so' from /etc/ld.so.preload cannot be preloaded (cannot open shared object file): ignored.
+[2019-06-07 12:31:21:060] [error]:  
+[2019-06-07 12:31:23:244] [trace]:  IPFS available
+[2019-06-07 12:31:23:245] [info]:  IPFS node detected..
+[2019-06-07 12:31:28:245] [trace]:  IPFS available
+[2019-06-07 12:31:33:246] [trace]:  IPFS available
